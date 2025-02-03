@@ -7,4 +7,4 @@ This repository contains the legal documents for the Star Citizen Companion Disc
 
 If you have any questions, contact the bot owner @AlphaTheWalf.
 
-Feel free to post any issues as well!
+# Feel free to post any issues as well!
