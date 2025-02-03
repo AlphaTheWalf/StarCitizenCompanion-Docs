@@ -6,3 +6,5 @@ This repository contains the legal documents for the Star Citizen Companion Disc
 - [Privacy Policy](./PRIVACY_POLICY.md)
 
 If you have any questions, contact the bot owner @AlphaTheWalf.
+
+Feel free to post any issues as well!
