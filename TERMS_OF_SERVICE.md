@@ -34,7 +34,7 @@ These Terms shall be governed by and construed in accordance with the laws of th
 
 9. Contact Information
 For questions or concerns regarding these Terms, please contact the Bot owner at:
-@AlphaTheWalf@gmail.com
+AlphaTheWalf@gmail.com
 
 Disclaimer:
 This document is provided for informational purposes only and does not constitute legal advice. Please consult a legal professional to ensure your Terms meet all applicable legal requirements.
