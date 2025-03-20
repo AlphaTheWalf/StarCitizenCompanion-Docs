@@ -10,3 +10,7 @@ Send any issues you have with the bot or the documents here as well
 https://github.com/AlphaTheWalf/StarCitizenCompanion-Docs/issues
 
 If you have any questions, contact the bot owner @AlphaTheWalf.
+
+
+# Invite Link
+https://discord.com/oauth2/authorize?client_id=1335286329931595776
