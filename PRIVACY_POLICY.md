@@ -1,5 +1,5 @@
 Privacy Policy
-Last Updated: [Insert Date]
+Last Updated: 8/23/2025
 
 1. Introduction and Scope
 This Privacy Policy explains how the Star Citizen Companion Bot (“Bot”) collects, uses, stores, and protects user data. By using the Bot, you consent to the practices described in this Privacy Policy.
