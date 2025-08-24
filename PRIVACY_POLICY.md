@@ -33,6 +33,3 @@ This Privacy Policy may be updated periodically to reflect changes in our practi
 8. Contact Information
 For any questions, concerns, or requests related to this Privacy Policy or your data, please contact the Bot owner at:
 AlphaTheWalf@gmail.com
-
-Disclaimer:
-This Privacy Policy is intended for informational purposes only and does not constitute legal advice. For any concerns regarding your data privacy rights or legal obligations, please consult a legal professional.
