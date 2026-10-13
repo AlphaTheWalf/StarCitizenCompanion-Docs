@@ -20,7 +20,7 @@ It's a real-money pledge price, shown separately from in-game aUEC. Choose USD, 
 
 ## Can other people see my commands?
 
-Choose public replies in **Settings** to share ordinary results. Identity, settings, reports, and reminders stay private. Crew and rescue boards are shared in their channel. This setting controls SCC's replies; Discord controls how the command itself is displayed.
+Game lookups are public by default unless your personal or server reply preference says otherwise. Use **Settings** to choose private or public ordinary results. Identity, settings, reports, and reminders stay private. Crew and rescue boards are shared in their channel. This setting controls SCC's replies; Discord controls how the command itself is displayed.
 
 ## Can someone else use my menu?
 
@@ -28,7 +28,7 @@ Personal menus are yours, even when public. Others can open their own with `/sta
 
 ## Why did my menu disappear or its buttons stop working?
 
-Personal menus expire after ten minutes; `/help` expires after three. Run `/start` to open another. Use **Keep result** before it expires if you want to save the card without buttons. Shared hubs and crew or support boards stay available across restarts, but SCC needs to be online and have channel access.
+Controls stay active for four hours, and results remain after they expire or SCC restarts. **Done** removes controls immediately; **Close** deletes the result. Open `/menu` or the relevant folder to browse again. Discord may dismiss private replies, so use public results if you need them in channel history. Shared hubs and crew or support boards stay available across restarts, but SCC needs to be online and have channel access.
 
 ## Can SCC find a player selling an item?
 
@@ -36,7 +36,7 @@ Yes. Look up a weapon or material with `/item`, or explore an ingredient from a 
 
 ## Why are old menus still in the channel?
 
-Current menus reuse their reply and clear when they expire. Older messages may still be there. **Close** removes a current menu; **Keep result** leaves the card. Shared hubs and crew or support boards are meant to stay.
+Menus reuse their reply while you browse, then keep the result when controls expire. **Close** removes it; **Done** leaves it without controls. Shared hubs and crew or support boards are meant to stay.
 
 ## How often does the data update?
 
@@ -57,3 +57,7 @@ I receive and review `/bug`, `/suggest`, and `/report_data` privately. They aren
 ## How do I remove my data?
 
 Use `/identity unlink` to remove the saved account connection and display permissions. Revoking SCC in Citizen iD alone doesn't delete the connection already saved by SCC. For other access, correction, or removal requests, [email me](mailto:AlphaTheWalf@gmail.com). Please keep private details out of public issues. See the [privacy policy](PRIVACY_POLICY.md).
+
+## Where did the cargo and other shortcuts go?
+
+Open `/ship` for cargo capacity, container compatibility, ship comparisons, dealerships and fuel. `/commodity` brings materials, buy/sell prices and mining views together. `/trade` holds route planning, calculations and filters. I kept the underlying tools and moved their entry points into these folders.
