@@ -2,7 +2,7 @@
 
 I'm **AlphaTheWalf**, and I run SCC. It helps you find a crew, plan a trade run, or check a ship without leaving Discord. You can also organise community activities, share materials, and plan crafting.
 
-**Run `/start` to get going.** Choose your language, price preferences, and whether replies should be private or public. Then pick a task and follow the buttons. You can still use slash commands to jump straight to a tool.
+**Run `/start` or `/menu` to get going.** Choose your language, price preferences, and whether replies should be private or public. Then pick a task and follow the buttons. You can still use slash commands to jump straight to a tool.
 
 [Invite SCC to your server](https://discord.com/oauth2/authorize?client_id=1335286329931595776)
 
@@ -23,7 +23,8 @@ I'm **AlphaTheWalf**, and I run SCC. It helps you find a crew, plan a trade run,
 ## What can SCC do?
 
 - **Crew:** plan a session, pick roles, claim jobs, set up weekly activities, or request rescue and escort.
-- **Trade:** find routes for your budget and cargo space, compare reported prices, and track refinery jobs.
+- **Trade:** find routes for your budget and cargo space, calculate a run, or filter reports by system, age and container size.
+- **Commodities:** check buy and sell prices, keep raw ore separate from refined cargo, or switch to mining and refining information.
 - **Ships:** browse by role or budget, compare variants, and find purchase and rental locations.
 - **Crafting:** look up recipes, explore ingredients, find UEX player sellers, and check what your group already has in stock.
 - **Mining:** look up resources and equipment, compare refining options, and plan a trip.
@@ -31,7 +32,7 @@ I'm **AlphaTheWalf**, and I run SCC. It helps you find a crew, plan a trade run,
 
 Results include source links where available, so you can check the information yourself. In-game prices use **aUEC**; real-money pledge prices are shown separately. Check the data's date and game version before planning a purchase or trade.
 
-Use **Close** to remove a menu or **Keep result** to leave the card without buttons. Unused personal menus clear automatically. Read the latest patch notes under **Home → What’s new**.
+Results stay in chat when menus expire or SCC restarts. Controls remain active for four hours. **Close** removes a result; **Done** keeps it without buttons. Read the latest patch notes under **Home → What’s new**.
 
 ## Help and feedback
 
@@ -39,6 +40,6 @@ Use `/help` for guidance, `/suggest` for ideas, `/bug` for problems, or `/report
 
 You can also [open a GitHub issue](https://github.com/Legion-AlphaTheWalf/StarCitizenCompanion-Docs/issues/new/choose). For private account or data questions, or a security concern, contact me (**AlphaTheWalf**) in Discord or [by email](mailto:AlphaTheWalf@gmail.com). Please keep private details out of public issues.
 
-SCC 3.4.3 · Updated October 9, 2026
+SCC 3.5.0 · Updated October 13, 2026
 
 SCC is a community project and is not affiliated with Cloud Imperium Games or Roberts Space Industries.
