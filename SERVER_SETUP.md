@@ -12,7 +12,7 @@
 
 You'll need **Manage Server** permission to set up SCC or create a hub in your server. I also have access to these controls as SCC's maintainer. Discord's integration and channel permissions still apply.
 
-Personal menus clear when they expire. Members can use **Close** to remove one or **Keep result** to save its card. Shared hubs, crew boards, support boards, and saved records stay in place. SCC only needs to delete its own temporary replies, not other members' messages.
+Personal results remain after their controls expire or SCC restarts. Members can use **Close** to remove one or **Done** to remove only its controls. Shared hubs, crew boards, support boards, and saved records stay in place. SCC only deletes its own result when its owner presses Close.
 
 ## Choose your features
 
