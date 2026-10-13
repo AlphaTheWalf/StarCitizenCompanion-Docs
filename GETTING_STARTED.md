@@ -6,7 +6,7 @@
 
 Run `/start` in your server, or click **Open my SCC panel** on a shared hub. On your first visit, choose your language, pledge currency, ship budget, and private or public replies. Select **Save and open SCC**, or **Use SCC now** to keep the defaults.
 
-Setup and the menu it opens are private. Your reply preference applies to later searches and visits. You can change it any time in **Settings** or `/settings`.
+Setup stays private. When you finish, SCC opens a separate public menu if your preferences allow it. Game lookups default to public; saved private preferences still apply. You can change it any time in **Settings** or `/settings`.
 
 ## Pick something to do
 
@@ -14,8 +14,9 @@ Setup and the menu it opens are private. Your reply preference applies to later 
 | --- | --- |
 | Home | Get help or read the latest updates |
 | Crew | Find a crew, plan an activity, or request rescue and escort |
-| Trade | Find a run for your budget and cargo space; track a refinery job |
-| Ships | Search for a ship or browse by role and budget |
+| Trade | Plan and calculate cargo runs; filter route reports |
+| Commodities | Buy and sell locations, raw/refined materials, mining and refining views |
+| Ships | Search, compare editions, find dealerships, or check cargo capacity and containers |
 | Crafting | Look up items and blueprints, explore ingredients, or check shared inventory |
 | Mining | Look up resources and equipment, plan a trip, or compare refining options |
 | More | Check mission requirements, share notes, look up RSI profiles, or link your account |
@@ -23,15 +24,15 @@ Setup and the menu it opens are private. Your reply preference applies to later 
 
 The section you're viewing is highlighted in blue. Some features may be disabled by your server's managers.
 
-You can also open a topic directly with `/trade menu`, `/mining menu`, `/craft menu`, or `/ship menu`. Use the topic buttons or **Go to another activity** to move between them.
+Open the main folders directly with `/ship`, `/commodity` or `/trade`. Use `/menu` to choose another folder. Each result shows tools for its own topic rather than a list of every activity.
 
 ## Items, recipes, and source links
 
-Try `/item query:Karna Rifle` to see a matching recipe, shops, and sources. `/blueprint query:Karna Rifle` takes you straight to the recipe. Run either command without a name to open Crafting.
+Try `/item query:Karna Rifle` to see a matching recipe, shops, and sources. `/craft blueprint query:Karna Rifle` takes you straight to the recipe. Run `/item` without a name or choose Crafting from `/menu` to browse its tools.
 
 When viewing a recipe:
 
-- Select an ingredient under **Explore an ingredient or related result** to look it up in SCC. Use **Back** to return.
+- Select an ingredient under **Explore an ingredient or related result** to look it up in SCC. Use **Back** to return. A commodity ingredient opens its buy/sell and mining views, with **Back to recipe** to return.
 - Open **Wiki page** or **Wiki search** to read more in your browser.
 - Choose **Plan materials** to compare the recipe with your server's shared inventory, or **Source materials** for gathering guidance.
 - Use **Next details** and **More related** when a recipe has more information than fits on one page.
@@ -39,6 +40,12 @@ When viewing a recipe:
 You'll also find source links in ship, trade, mining, refinery, mission, salvage, location, and public RSI results. **Wiki data record** opens the original data behind a result. Wiki search links are used when SCC doesn't have a direct article link.
 
 If SCC can't find a recipe or price, that doesn't mean the item is unavailable in game. Wikelo barter rewards are shown separately from crafting recipes. Blueprint browsing works in DMs; shared inventory planning needs a server.
+
+## Commodities and materials
+
+Try `/commodity name:Gold`. The first card shows both buy and sell locations. Choose **Buy locations**, **Sell locations**, **Mining**, **Refining** or **Trade routes** below it. Raw ore and refined cargo keep separate quotes; the related-material dropdown lets you switch between them. Commodity and ore prices use aUEC per SCU.
+
+Ship lists put shared source references at the bottom, with a Wiki link beside each ship. A dealership’s location appears once above its offers.
 
 ## Find a player seller or buyer
 
@@ -52,9 +59,9 @@ Open the UEX listing to contact a seller or buyer. SCC doesn't place orders, pub
 
 ## Keep the channel tidy
 
-Searches and topic changes usually update the same menu. **Close** removes it. **Keep result** leaves the card without buttons and keeps its existing privacy setting.
+Searches and topic changes usually update the same menu. **Close** removes it. **Done** leaves the card without buttons and keeps its existing privacy setting.
 
-Unused personal menus clear after ten minutes; `/help` clears after three. Open `/start` again to continue. Shared hubs and crew or support boards stay in place. Cards you choose to keep also remain. Some older messages may still be in the channel.
+Controls stay active for four hours. When they expire or SCC restarts, the result stays in chat and its temporary controls are removed where possible. Open its folder again to browse further. Discord controls how long private replies remain visible; public results are the better choice when you want to revisit them later.
 
 Read **Home → What’s new** or the [changelog](CHANGELOG.md) for recent changes.
 
