@@ -2,6 +2,19 @@
 
 [Back to the docs](README.md)
 
+## 3.5.0 — October 13, 2026
+
+- Added `/commodity` and a working `/menu` entry. `/ship`, `/commodity` and `/trade` open their folders when no lookup options are supplied.
+- Moved overlapping ship, cargo, fuel, item-shop and trade shortcuts into folder tools. Comparisons, dealerships, container checks, calculations and advanced route filters remain available.
+- Merged duplicate ship records from the providers, kept genuine editions separate and labelled previously ambiguous Best In Show entries. Autocomplete now prioritizes relevant matches.
+- Put shared sources at the bottom of ship lists, kept each ship’s Wiki link beside its entry and removed repeated location names. Dealerships show their location once above the offers.
+- Added commodity views for buying, selling, mining, refining and trade routes. Raw ore and refined materials keep separate price reports; prices are labelled per SCU.
+- Connected recipe ingredients to those commodity views with a return to the recipe. UEX player marketplace browsing remains available.
+- Made game lookups public by default while respecting saved visibility choices. Setup opens a separate public menu when preferences allow it; settings, account linking and sensitive actions remain private.
+- Stopped deleting results when a menu expires or SCC restarts. Controls stay active for four hours; Close deletes the result and Done removes the controls.
+- Fixed older public cards and private forms using expired original interaction tokens, and protected new controls from queued timeout updates.
+- Updated the command reference and guides for the new folders and result retention.
+
 ## 3.4.3 — October 8, 2026
 
 - Fixed **Force full refresh** skipping the Wiki's current game version. SCC now checks that version before reloading the related catalogs.
