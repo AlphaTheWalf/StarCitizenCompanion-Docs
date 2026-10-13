@@ -2,19 +2,26 @@
 
 [Back to the docs](README.md)
 
-These are the **129 commands available in SCC 3.4.3**. Start with `/start` if you'd rather browse menus. In Discord, type a command to see its options and autocomplete suggestions.
+Start with **`/ship`**, **`/commodity`** or **`/trade`**. Each opens a folder when you leave its options empty. **`/menu`** shows the other folders; **`/start`** also offers first-time preferences.
 
-Options marked **required** must be filled in. Replace `<value>` with your own choice; don't type the angle brackets.
+| Folder | What is inside |
+| --- | --- |
+| `/ship` | Models, editions, comparisons, dealerships, rentals, cargo capacity, container compatibility and fuel |
+| `/commodity` | Materials, buy and sell locations, raw/refined forms, mining, refining and trade routes |
+| `/trade` | Budget routes, exact calculations, legality, system, report-age and container filters |
 
-**Manager** commands need Manage Server permission; I also have access as SCC's maintainer. **Maintainer** commands are restricted to me (**AlphaTheWalf**). Other actions may depend on the server's enabled features, channel permissions, and who owns the activity or record.
+The detailed reference below lists **118 slash commands in SCC 3.5.0**. Folder buttons replace overlapping shortcuts such as `/cargo`, `/item_find`, `/fuel_best` and the separate `/blueprint` entry. Crafting, mining and other advanced families keep their useful slash shortcuts.
 
-Settings, reports, account linking, and reminders stay private. Ordinary searches follow your reply preference; crew and support boards are shared in their channel.
+Options marked **required** must be filled in. Replace `<value>` with your own choice; do not type the angle brackets.
+
+**Manager** commands need Manage Server permission; I also have access as SCC’s maintainer. **Maintainer** commands are restricted to me (**AlphaTheWalf**). Other actions depend on server features, channel access and record ownership.
+
+Game lookups and the main menu default to public unless a saved reply preference says otherwise. Settings, reports, identity linking and sensitive controls stay private. Results remain after controls expire; **Close** removes a result and **Done** removes only its controls.
 
 ## Jump to a family
 
 - [General](#general)
 - [analytics](#analytics)
-- [cargo](#cargo)
 - [config](#config)
 - [craft](#craft)
 - [debrief](#debrief)
@@ -29,49 +36,41 @@ Settings, reports, account linking, and reminders stay private. Ordinary searche
 - [ops](#ops)
 - [refinery](#refinery)
 - [salvage](#salvage)
-- [ship](#ship)
 - [status_watch](#status_watch)
 - [support](#support)
-- [trade](#trade)
 - [trade_alert](#trade_alert)
 
 ## General
 
 | Command | Purpose | Options | Access notes |
 | --- | --- | --- | --- |
-| `/blueprint` | Explore a blueprint or open the Crafting menu | `query:<value>` — Blueprint or finished item; leave empty to open the Crafting menu | — |
 | `/bug` | Send me a private report about an SCC problem | `description:<value>` **required** — What happened, what you expected, and which command was involved | — |
-| `/fuel_best` | Compare the cheapest cached hydrogen or quantum fuel locations | `fuel_type:<value>` **required** — Choose hydrogen fuel or quantum fuel | — |
+| `/commodity` | Look up a material, buy and sell prices, mining information, or open its folder | `name:<value>` — Commodity or material; leave empty to open the Commodities folder | — |
 | `/help` | Browse SCC features, examples, and command categories | `category:<value>` — Choose a feature area to see its most useful commands | — |
 | `/item` | Explore an item, its ingredients, shops and sources, or open the menu | `query:<value>` — Item or material name; leave empty to open the Crafting menu | — |
-| `/item_find` | Find where an item is sold and compare cached purchase prices | `query:<value>` **required** — Select or type a weapon, armor, component, consumable, or other item | — |
+| `/menu` | Open SCC folders for ships, commodities, trading, crafting and community tools | None | — |
 | `/ping` | Check SCC's connection and Discord response time | None | — |
 | `/privacy` | See exactly what SCC stores, excludes, and keeps server-isolated | None | — |
 | `/report_data` | Privately flag an incorrect Star Citizen value, source, or location | `subject:<value>` **required** — Ship, item, mission, resource, terminal, or command with bad data<br>`correction:<value>` **required** — What SCC showed, what you believe is correct, and any source link | — |
-| `/reports` | Review recent private bug reports and suggestions | `report_id:<value>` — Open a report's redacted preview before optional GitHub forwarding | Maintainer |
+| `/reports` | Owner-only: review recent private bug reports and suggestions | `report_id:<value>` — Open a report's redacted preview before optional GitHub forwarding | Maintainer |
 | `/rsi_status` | Check official Star Citizen platform and game service status | None | — |
 | `/settings` | Choose your language, ship budget, pledge currency, and reply privacy | None | — |
+| `/ship` | Look up a ship or open vehicle, dealership and cargo tools | `name:<value>` — Ship or vehicle name; leave empty to open the Ships folder | — |
 | `/start` | Start here with guided buttons for SCC's most useful features | None | — |
 | `/status` | Show Discord, provider, cache, RSI, and dashboard health | None | — |
 | `/suggest` | Privately suggest a new SCC feature or improvement | `suggestion:<value>` **required** — Describe the feature and how players or servers would use it | — |
-| `/sync_commands` | Resync SCC slash commands and translations with Discord | None | Maintainer |
-| `/update` | Refresh SCC's shared UEX, Wiki, and reference caches | `force:<value>` — Refresh even when the current cache is still considered fresh | Maintainer |
+| `/sync_commands` | Owner-only: resync SCC slash commands and translations with Discord | None | Maintainer |
+| `/trade` | Open trading tools, find commodity routes, or plan a run for your budget | `commodity:<value>` — Commodity to trade; leave empty to open trading tools<br>`budget:<value>` — Maximum aUEC to spend on cargo<br>`ship:<value>` — Ship whose cargo capacity should be used<br>`capacity_scu:<value>` — Cargo capacity in SCU when no ship is selected | — |
+| `/update` | Owner-only: refresh SCC's shared UEX, Wiki, and reference caches | `force:<value>` — Refresh even when the current cache is still considered fresh | Maintainer |
 | `/where` | Find terminals, cities, moons, planets, and their parent locations | `query:<value>` **required** — Select or type a terminal or location name | — |
 
 ## analytics
 
 | Command | Purpose | Options | Access notes |
 | --- | --- | --- | --- |
-| `/analytics global` | Show global anonymous command totals | `days:<value>` — Number of days to summarize, from 1 to 365 | Maintainer |
+| `/analytics global` | Owner-only: show global anonymous command totals | `days:<value>` — Number of days to summarize, from 1 to 365 | Maintainer |
 | `/analytics server` | Show private anonymous command totals for this server | `days:<value>` — Number of days to summarize, from 1 to 365 | Manager |
 | `/analytics set` | Enable or disable optional anonymous analytics for this server | `enabled:<value>` **required** — Whether this server allows anonymous command totals | Manager |
-
-## cargo
-
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/cargo capacity` | Quickly check the cached cargo capacity of a ship | `ship:<value>` **required** — Select or type the ship whose cargo capacity you need | — |
-| `/cargo fit` | Check ship and terminal container-size compatibility for a cargo route | `ship:<value>` **required** — Select the exact ship or vehicle carrying the cargo<br>`buy_terminal:<value>` **required** — Origin terminal where the cargo is loaded<br>`sell_terminal:<value>` **required** — Destination terminal where the cargo is unloaded<br>`commodity:<value>` — Optional commodity for terminal-specific container reports<br>`scu:<value>` — Optional amount to pack; defaults to the ship's cached capacity | — |
 
 ## config
 
@@ -80,7 +79,7 @@ Settings, reports, account linking, and reminders stay private. Ordinary searche
 | `/config features` | Choose which optional community workflows this server uses | `feature:<value>` — The optional feature to configure<br>`enabled:<value>` — Turn this feature on or off in this server | Manager |
 | `/config get` | List advanced SCC settings saved for this server | None | Manager |
 | `/config panel` | Post a reusable SCC button panel in this server channel | None | Manager |
-| `/config presence` | Change SCC’s global Discord status and activity text | None | Maintainer |
+| `/config presence` | Operator-only: change SCC’s global Discord status and activity text | None | Maintainer |
 | `/config set` | Set one advanced server-specific SCC value | `key:<value>` **required** — Setting name; suggestions show supported common keys<br>`value:<value>` **required** — New text value for this server | Manager |
 | `/config setup` | Set server defaults for SCC language, ship budget, currency, and reply privacy | None | Manager |
 
@@ -89,7 +88,7 @@ Settings, reports, account linking, and reminders stay private. Ordinary searche
 | Command | Purpose | Options | Access notes |
 | --- | --- | --- | --- |
 | `/craft blueprint` | Look up a crafting blueprint, ingredients, time, and unlock status | `query:<value>` **required** — Select or type the item or blueprint you want to craft | — |
-| `/craft menu` | Open the connected SCC activity menu | None | — |
+| `/craft menu` | Open this SCC folder and choose its tools | None | — |
 | `/craft own` | Record a crafting blueprint that you own for this server's planners | `query:<value>` **required** — Select or type the blueprint you personally own | — |
 | `/craft owners` | See which members have recorded ownership of crafting blueprints | `member:<value>` — Optional member whose recorded blueprints you want to view | — |
 | `/craft plan` | Compare a blueprint's requirements with this server's shared inventory | `query:<value>` **required** — Select or type the item or blueprint you want to produce<br>`quantity:<value>` — How many finished items you want to produce | — |
@@ -119,7 +118,7 @@ Settings, reports, account linking, and reminders stay private. Ordinary searche
 | `/inventory add` | Add crafting material to this server's shared inventory | `name:<value>` **required** — Select or type the material or item being stored<br>`quantity:<value>` **required** — How much is available<br>`unit:<value>` — Measurement unit such as units, SCU, cSCU, or kg<br>`quality:<value>` — Optional material quality value<br>`location:<value>` — Optional place where the material is stored | — |
 | `/inventory history` | See additions, consumption, removals, and verification of shared stock | `item:<value>` **required** — Choose an inventory entry | — |
 | `/inventory list` | List crafting materials recorded in this server's shared inventory | None | — |
-| `/inventory menu` | Open the connected SCC activity menu | None | — |
+| `/inventory menu` | Open this SCC folder and choose its tools | None | — |
 | `/inventory remove` | Remove one suggested entry from this server's shared inventory | `entry_id:<value>` **required** — Select the inventory entry to remove | Manager |
 | `/inventory verify` | Confirm that an inventory entry still matches the stock in game | `item:<value>` **required** — An inventory entry you own or manage | — |
 
@@ -159,10 +158,10 @@ Settings, reports, account linking, and reminders stay private. Ordinary searche
 | --- | --- | --- | --- |
 | `/mining laser` | Inspect a mining laser's range, power, module slots, and modifiers | `laser:<value>` **required** — Select a mining laser or mining head | — |
 | `/mining loadout` | Compare a laser and up to three mining modifiers against a rock profile | `laser:<value>` **required** — Mining laser or head<br>`modifier_1:<value>` — Optional first module or gadget<br>`modifier_2:<value>` — Optional second module or gadget<br>`modifier_3:<value>` — Optional third module or gadget<br>`rock_mass:<value>` — Optional scanned rock mass<br>`resistance:<value>` — Optional scanned resistance value<br>`instability:<value>` — Optional scanned instability value | — |
-| `/mining menu` | Open the connected SCC activity menu | None | — |
+| `/mining menu` | Open this SCC folder and choose its tools | None | — |
 | `/mining modifier` | Inspect a mining module or gadget and its published effects | `modifier:<value>` **required** — Select a mining module, consumable, or gadget | — |
 | `/mining plan` | Build a simple mining trip plan around a resource, ship, and target amount | `resource:<value>` **required** — Resource you want to gather<br>`ship:<value>` — Optional mining or cargo ship for capacity planning<br>`amount_scu:<value>` — Optional target quantity in SCU<br>`priority:<value>` — Choose whether refining should favor yield, speed, or cost | — |
-| `/mining resource` | Find how and where a mineable resource is obtained and sold | `resource:<value>` **required** — Select a mineral, gem, or mineable crafting material | — |
+| `/mining resource` | Open commodity data including buy, sell and mining views | `resource:<value>` **required** — Select a mineral, gem, or mineable crafting material | — |
 | `/mining sell` | Find the best cached locations to sell a raw mining resource | `resource:<value>` **required** — Select the raw mineral or gem to sell | — |
 
 ## mission
@@ -216,7 +215,7 @@ Settings, reports, account linking, and reminders stay private. Ordinary searche
 | `/refinery cancel` | Cancel a tracked refinery job and its reminder | `job:<value>` **required** — Choose the job to cancel | — |
 | `/refinery collect` | Mark a refinery job as picked up | `job:<value>` **required** — Choose one of your completed refinery jobs | — |
 | `/refinery jobs` | See refinery completion times and your pickup queue | `all_members:<value>` — Show the server’s jobs instead of only yours | — |
-| `/refinery menu` | Open the connected SCC activity menu | None | — |
+| `/refinery menu` | Open this SCC folder and choose its tools | None | — |
 | `/refinery methods` | Browse refinery methods and their published yield, time, and cost values | `method:<value>` — Optional refinery method to prioritize in the results | — |
 | `/refinery track` | Save a refinery job and optionally remind you when it is ready | `station:<value>` **required** — Where the refinery job is running<br>`material:<value>` **required** — What you are refining<br>`quantity:<value>` **required** — Cargo amount in SCU<br>`ready:<value>` **required** — Time remaining, such as 6h30m<br>`method:<value>` — Refining method chosen in game<br>`remind:<value>` — Post a reminder in this channel when the job is due | — |
 
@@ -227,16 +226,6 @@ Settings, reports, account linking, and reminders stay private. Ordinary searche
 | `/salvage plan` | Estimate salvage cargo trips and show current material sale options | `ship:<value>` **required** — Select the salvage ship or exact special variant<br>`material:<value>` **required** — Choose RMC or Construction Materials<br>`target_scu:<value>` **required** — How much material you intend to collect | — |
 | `/salvage sell` | Find cached sale routes for RMC or Construction Materials | `material:<value>` **required** — Choose the salvage material to sell | — |
 | `/salvage ships` | Browse ships and special variants identified for salvage gameplay | `ship:<value>` — Optional salvage ship or variant to inspect | — |
-
-## ship
-
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/ship compare` | Compare two exact ships or variants, including acquisition and special-edition origin | `first:<value>` **required** — First exact ship or vehicle<br>`second:<value>` **required** — Second exact ship or vehicle | — |
-| `/ship info` | Find an exact ship or vehicle, including special editions and acquisition locations | `name:<value>` **required** — Select an exact model or type part of a ship or ground-vehicle name | — |
-| `/ship menu` | Open the connected SCC activity menu | None | — |
-| `/ship shop` | List exact ships sold or rented at a dealership or rental terminal | `mode:<value>` **required** — Show purchases, rentals, or both<br>`location:<value>` **required** — Select a ship dealership or rental terminal | — |
-| `/ship variants` | List standard, special, event, reward, and dealer variants in a ship family | `ship:<value>` **required** — Select any member of the ship family | — |
 
 ## status_watch
 
@@ -256,16 +245,6 @@ Settings, reports, account linking, and reminders stay private. Ordinary searche
 | `/support show` | Open a rescue or escort request and its controls | `request:<value>` **required** — Choose a rescue or escort request | — |
 | `/support update` | Claim, release, arrive at, resolve, or cancel a support request | `request:<value>` **required** — Choose a rescue or escort request<br>`action:<value>` **required** — What to do with the request | — |
 
-## trade
-
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/trade best` | Browse the highest-profit trade routes in SCC's current cache | `limit:<value>` — How many routes to display, from 1 to 15 | — |
-| `/trade calculate` | Calculate cost, revenue, and profit for one exact cargo run | `commodity:<value>` **required** — Select or type the commodity being transported<br>`buy_terminal:<value>` **required** — Where you plan to buy; suggestions follow the selected commodity<br>`sell_terminal:<value>` **required** — Where you plan to sell; suggestions follow the selected commodity<br>`scu:<value>` **required** — How many SCU you want to carry | — |
-| `/trade menu` | Open the connected SCC activity menu | None | — |
-| `/trade plan` | Find profitable routes that fit your budget and ship capacity | `budget:<value>` **required** — Maximum aUEC available to buy cargo<br>`capacity_scu:<value>` — Usable cargo capacity in SCU; optional when you choose a ship<br>`ship:<value>` — Choose your ship to use its cached cargo capacity<br>`limit:<value>` — How many suggested routes to display, from 1 to 10<br>`system:<value>` — Optional system for both ends of the route, such as Stanton<br>`legal_only:<value>` — Only commodities marked legal by the provider<br>`max_age_hours:<value>` — Exclude unknown or older provider updates; optional<br>`container_size:<value>` — Only facilities supporting this container size; optional | — |
-| `/trade routes` | Find profitable buy and sell routes for one commodity | `commodity:<value>` **required** — Select or type the commodity you want to haul<br>`limit:<value>` — How many matching routes to display, from 1 to 15 | — |
-
 ## trade_alert
 
 | Command | Purpose | Options | Access notes |
@@ -273,3 +252,4 @@ Settings, reports, account linking, and reminders stay private. Ordinary searche
 | `/trade_alert add` | Notify a channel when a commodity reaches a profit-per-SCU target | `commodity:<value>` **required** — Select or type the commodity to monitor<br>`minimum_profit_per_scu:<value>` **required** — Minimum aUEC profit per SCU required before alerting<br>`channel:<value>` — Channel that should receive the alert; defaults to this channel | Manager |
 | `/trade_alert list` | List commodity profit alerts configured for this server | None | Manager |
 | `/trade_alert remove` | Remove one suggested commodity profit alert | `alert_id:<value>` **required** — Select the trade alert to remove | Manager |
+
