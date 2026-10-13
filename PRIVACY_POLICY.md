@@ -1,6 +1,6 @@
 # Privacy policy
 
-Last updated: October 8, 2026
+Last updated: October 13, 2026
 
 ## 1. Introduction and scope
 
@@ -32,7 +32,7 @@ SCC does not save your Citizen iD password, email address, or OAuth access/refre
 
 I store records in SCC's local database and protected backups; technical logs rotate. My private dashboard is restricted to me. Server-scoped records belong to that server, while personal preferences and linked-account records belong to the member.
 
-Ordinary query replies are private by default, but server defaults and personal preferences can make them public. A public result and shared activity/support board can be seen by people with channel access. Sensitive identity/settings/report/reminder/control replies remain private. These reply settings do not make shared server inventory, notes or crew records confidential to their author.
+Game-data lookups and the main menu are public by default, unless a saved server or personal reply preference makes them private. Other ordinary replies retain private defaults and follow server/personal preferences. A public result and shared activity/support board can be seen by people with channel access. Sensitive identity/settings/report/reminder/control replies remain private. These reply settings do not make shared server inventory, notes or crew records confidential to their author.
 
 Your verified RSI handle is hidden from crew boards until you enable display for that server. Enabled boards can show the handle and last verification date, as can the activity page on my private dashboard. Turn display off, use the account page's hide-everywhere control, or unlink to revoke that display permission. SCC queues updates to tracked boards and retries failed edits a limited number of times. It cannot delete other people's copied messages/screenshots or guarantee removal from old untracked posts.
 
