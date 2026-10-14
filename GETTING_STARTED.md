@@ -23,7 +23,7 @@ Run `/start` for an introduction and examples, or `/menu` to open SCC’s folder
 | `/server` | Manager settings, shared panels, notifications and usage |
 | `/help` | Guides, status, privacy, feedback and data reports |
 
-Choose a section, then an action. Detail forms stay private. Set required fields, adjust any optional fields you need, then choose **Run**. Searchable fields offer matching suggestions; member and channel fields have their own pickers. Server features and permissions still apply.
+Choose a section, then an action. Simple searches ask for a name and open the result when you choose a match. Forms for actions that save or change something stay private: fill the details, then choose the named action button. Optional fields keep their defaults until changed. Server features and permissions still apply.
 
 ## Items, recipes, and source links
 
@@ -57,7 +57,7 @@ Open the UEX listing to contact a seller or buyer. SCC doesn't place orders, pub
 
 ## Keep the channel tidy
 
-Searches and topic changes usually update the same menu. **Close** removes it. **Done** leaves the card without buttons and keeps its existing privacy setting.
+Searches and topic changes usually update the same menu. New lookups and menu navigation use your saved reply visibility. Choose **Save and open SCC** in Preferences to apply a change. Paging through an existing result keeps its original visibility. When visibility changes, Discord requires a new message; SCC removes the earlier card’s controls and keeps its contents. **Close** removes it. **Done** leaves the card without buttons and keeps its existing privacy setting.
 
 Controls stay active for four hours. When they expire or SCC restarts, the result stays in chat and its temporary controls are removed where possible. Open its folder again to browse further. Discord controls how long private replies remain visible; public results are the better choice when you want to revisit them later.
 

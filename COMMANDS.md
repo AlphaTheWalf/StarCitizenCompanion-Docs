@@ -2,7 +2,7 @@
 
 [Back to the docs](README.md)
 
-SCC 3.6.3 has **12 callable headers**. Individual actions appear inside the GUIs. I kept the existing tools and moved their entry points into folders.
+SCC 3.6.4 has **12 callable headers**. Individual actions appear inside the GUIs. I kept the existing tools and moved their entry points into folders.
 
 ## Headers
 
@@ -27,7 +27,7 @@ For quick lookups, `/ship` accepts `name`, `/commodity` accepts `name`, and `/tr
 
 ## Using a tool
 
-Choose a section and an action. Forms are private. Choose a detail to enter text, search suggestions, select a choice, or pick a member/channel. Optional fields use their defaults until changed. Choose **Run** after reviewing the details. A submitted form cannot run twice. For crew tools, **Operation** in the tables refers to a saved activity; the GUI labels that field **Activity**.
+Choose a section and an action. Forms are private. Choose a detail to enter text, search suggestions, select a choice, or pick a member/channel. Optional fields use their defaults until changed. Simple single-field lookups open immediately after you choose a match. Review forms use a button named for the action, such as **Plan an activity** or **Add materials**. A submitted form cannot run twice. For crew tools, **Operation** in the tables refers to a saved activity; the GUI labels that field **Activity**.
 
 Game lookups follow your reply preferences and default to public. Settings, identity, reports and sensitive controls remain private. Shared crew and rescue boards are posted to their channel. Source links appear in results.
 

@@ -2,6 +2,14 @@
 
 [Back to the docs](README.md)
 
+## 3.6.4 — October 14, 2026
+
+- Fixed new searches and menu navigation inheriting the previous card’s private/public flag instead of the saved reply preference.
+- Kept settings and input forms private. Visibility changes open a new result and remove the earlier card’s controls; paging through an existing result keeps its original visibility.
+- Removed the extra Run step from simple item, blueprint, resource, equipment, location, mission and public-profile lookups. Choosing a match opens its results.
+- Replaced generic Run labels on review forms with the action’s name. Actions that change saved data still use their review form.
+- Clarified when preference changes are saved and corrected the displayed inherited game-lookup default.
+
 ## 3.6.3 — October 13, 2026
 
 - Moved the private source and public documentation to my AlphaTheWalf GitHub account.
