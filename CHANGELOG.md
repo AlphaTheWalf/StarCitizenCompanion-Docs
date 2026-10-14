@@ -2,6 +2,13 @@
 
 [Back to the docs](README.md)
 
+## 3.6.5 — October 14, 2026
+
+- Fixed ship comparisons keeping UEX’s single crew count while details used the Wiki’s min/max fields. Both views now use the same source-labelled crew display.
+- Kept Wiki game data and matching RSI listing figures separate when they differ, with maximum crew distinct from a recommendation. Unspecified recommendations remain labelled as not published.
+- Flagged inconsistent min/max records instead of silently sorting them into a plausible range. Partial records keep their missing values visible.
+- Kept exact model and edition matching for RSI crew figures, and labelled inherited base-model figures for curated variants.
+
 ## 3.6.4 — October 14, 2026
 
 - Fixed new searches and menu navigation inheriting the previous card’s private/public flag instead of the saved reply preference.

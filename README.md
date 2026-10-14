@@ -41,6 +41,6 @@ Use `/help` for guidance, `/help` → **Feedback → Suggest an idea** for ideas
 
 You can also [open a GitHub issue](https://github.com/AlphaTheWalf/StarCitizenCompanion-Docs/issues/new/choose). For private account or data questions, or a security concern, contact me (**AlphaTheWalf**) in Discord or [by email](mailto:AlphaTheWalf@gmail.com). Please keep private details out of public issues.
 
-SCC 3.6.4 · Updated October 14, 2026
+SCC 3.6.5 · Updated October 14, 2026
 
 SCC is a community project and is not affiliated with Cloud Imperium Games or Roberts Space Industries.

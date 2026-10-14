@@ -45,6 +45,8 @@ Try `/commodity name:Gold`. The first card shows both buy and sell locations. Ch
 
 Ship lists put shared source references at the bottom, with a Wiki link beside each ship. A dealership’s location appears once above its offers.
 
+Ship comparisons and details label crew figures by source. Wiki game data and RSI listings can disagree, so SCC shows them separately. Minimum and maximum crew are specifications from those sources; maximum is not a recommended crew size. SCC shows a recommendation only when a source explicitly provides one. Inconsistent min/max records are flagged.
+
 ## Find a player seller or buyer
 
 Weapon and material results can suggest UEX player sellers. Open **UEX marketplace** to browse **Find sellers** or **Find buyers**. You can filter by price, quality, and location.
