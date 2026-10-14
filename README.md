@@ -39,8 +39,8 @@ Results stay in chat when menus expire or SCC restarts. Controls remain active f
 
 Use `/help` for guidance, `/help` → **Feedback → Suggest an idea** for ideas, `/help` → **Feedback → Report a bug** for problems, or `/help` → **Feedback → Report incorrect game data** for a wrong price, item, or location. I review these reports privately; they aren't posted publicly.
 
-You can also [open a GitHub issue](https://github.com/Legion-AlphaTheWalf/StarCitizenCompanion-Docs/issues/new/choose). For private account or data questions, or a security concern, contact me (**AlphaTheWalf**) in Discord or [by email](mailto:AlphaTheWalf@gmail.com). Please keep private details out of public issues.
+You can also [open a GitHub issue](https://github.com/AlphaTheWalf/StarCitizenCompanion-Docs/issues/new/choose). For private account or data questions, or a security concern, contact me (**AlphaTheWalf**) in Discord or [by email](mailto:AlphaTheWalf@gmail.com). Please keep private details out of public issues.
 
-SCC 3.6.2 · Updated October 13, 2026
+SCC 3.6.3 · Updated October 13, 2026
 
 SCC is a community project and is not affiliated with Cloud Imperium Games or Roberts Space Industries.

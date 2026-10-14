@@ -48,4 +48,4 @@ The default activity directs people to `/start`. Activity text changes the profi
 
 Check channel and integration permissions, then try `/help` → **Status → Connection check** and `/help` → **Status → SCC health**. If a board stopped updating, restore SCC's access and ask its leader to repost it with `/ops` → **Activities → Post a crew board** or `/ops` → **Rescue & escort → Post a request board**. Use `/server` → **Setup & controls → Post a shared SCC panel** to replace a removed hub.
 
-Report a problem with `/help` → **Feedback → Report a bug** or a [GitHub issue](https://github.com/Legion-AlphaTheWalf/StarCitizenCompanion-Docs/issues/new/choose). For account, data, or security concerns, [contact me privately](SECURITY.md).
+Report a problem with `/help` → **Feedback → Report a bug** or a [GitHub issue](https://github.com/AlphaTheWalf/StarCitizenCompanion-Docs/issues/new/choose). For account, data, or security concerns, [contact me privately](SECURITY.md).

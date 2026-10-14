@@ -2,6 +2,11 @@
 
 [Back to the docs](README.md)
 
+## 3.6.3 — October 13, 2026
+
+- Moved the private source and public documentation to my AlphaTheWalf GitHub account.
+- Updated guide, changelog and issue links, plus the working Git remotes. The repositories kept their visibility, history and release tags.
+
 ## 3.6.2 — October 13, 2026
 
 - Updated SCC’s web framework dependencies, configuration loader and image installer after checking published security fixes.
