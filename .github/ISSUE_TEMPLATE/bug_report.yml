@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        This issue is public. Please leave out keys, passwords, and private account or server details. For a security or data concern, email AlphaTheWalf@gmail.com privately. You can also report a problem to the bot owner with /bug in Discord.
+        This issue is public. Please leave out keys, passwords, and private account or server details. For a security or data concern, email AlphaTheWalf@gmail.com privately. You can also send me a private bug report through /help → Feedback → Report a bug in Discord.
   - type: input
     id: version
     attributes:

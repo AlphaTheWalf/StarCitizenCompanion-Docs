@@ -1,255 +1,298 @@
-# Command reference
+# SCC folders and tools
 
 [Back to the docs](README.md)
 
-Start with **`/ship`**, **`/commodity`** or **`/trade`**. Each opens a folder when you leave its options empty. **`/menu`** shows the other folders; **`/start`** also offers first-time preferences.
+SCC 3.6.0 has **12 callable headers**. Individual actions appear inside the GUIs. I kept the existing tools and moved their entry points into folders.
 
-| Folder | What is inside |
+## Headers
+
+| Header | Opens |
 | --- | --- |
-| `/ship` | Models, editions, comparisons, dealerships, rentals, cargo capacity, container compatibility and fuel |
-| `/commodity` | Materials, buy and sell locations, raw/refined forms, mining, refining and trade routes |
-| `/trade` | Budget routes, exact calculations, legality, system, report-age and container filters |
+| `/start` | Introduction and examples |
+| `/menu` | Main menu |
+| `/ship` | Ship information and tools |
+| `/commodity` | Material information and buy/sell views |
+| `/trade` | Trade routes and calculations |
+| `/mining` | Mining, refining, refinery jobs and salvage |
+| `/craft` | Items, recipes and inventory |
+| `/ops` | Activities and community tools |
+| `/reference` | Locations, missions and public profiles |
+| `/settings` | Personal preferences and identity |
+| `/server` | Server manager controls |
+| `/help` | Guides, status, privacy and feedback |
 
-The detailed reference below lists **118 slash commands in SCC 3.5.0**. Folder buttons replace overlapping shortcuts such as `/cargo`, `/item_find`, `/fuel_best` and the separate `/blueprint` entry. Crafting, mining and other advanced families keep their useful slash shortcuts.
+`/menu` is the main hub. `/start` explains how SCC works and gives a few examples. You can open a topic header directly.
 
-Options marked **required** must be filled in. Replace `<value>` with your own choice; do not type the angle brackets.
+For quick lookups, `/ship` accepts `name`, `/commodity` accepts `name`, and `/trade` accepts `commodity`, `budget`, `ship` and `capacity_scu`. All options are optional. For example, `/ship name:Reclaimer` or `/commodity name:Gold` opens a result immediately.
 
-**Manager** commands need Manage Server permission; I also have access as SCC’s maintainer. **Maintainer** commands are restricted to me (**AlphaTheWalf**). Other actions depend on server features, channel access and record ownership.
+## Using a tool
 
-Game lookups and the main menu default to public unless a saved reply preference says otherwise. Settings, reports, identity linking and sensitive controls stay private. Results remain after controls expire; **Close** removes a result and **Done** removes only its controls.
+Choose a section and an action. Forms are private. Choose a detail to enter text, search suggestions, select a choice, or pick a member/channel. Optional fields use their defaults until changed. Choose **Run** after reviewing the details. A submitted form cannot run twice. For crew tools, **Operation** in the tables refers to a saved activity; the GUI labels that field **Activity**.
 
-## Jump to a family
+Game lookups follow your reply preferences and default to public. Settings, identity, reports and sensitive controls remain private. Shared crew and rescue boards are posted to their channel. Source links appear in results.
 
-- [General](#general)
-- [analytics](#analytics)
-- [config](#config)
-- [craft](#craft)
-- [debrief](#debrief)
-- [identity](#identity)
-- [inventory](#inventory)
-- [language](#language)
-- [ledger](#ledger)
-- [lookup](#lookup)
-- [mining](#mining)
-- [mission](#mission)
-- [note](#note)
-- [ops](#ops)
-- [refinery](#refinery)
-- [salvage](#salvage)
-- [status_watch](#status_watch)
-- [support](#support)
-- [trade_alert](#trade_alert)
+Buttons last four hours. Expiry or a normal restart retains the card; **Done** removes controls and **Close** deletes it.
 
-## General
+## GUI actions
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/bug` | Send me a private report about an SCC problem | `description:<value>` **required** — What happened, what you expected, and which command was involved | — |
-| `/commodity` | Look up a material, buy and sell prices, mining information, or open its folder | `name:<value>` — Commodity or material; leave empty to open the Commodities folder | — |
-| `/help` | Browse SCC features, examples, and command categories | `category:<value>` — Choose a feature area to see its most useful commands | — |
-| `/item` | Explore an item, its ingredients, shops and sources, or open the menu | `query:<value>` — Item or material name; leave empty to open the Crafting menu | — |
-| `/menu` | Open SCC folders for ships, commodities, trading, crafting and community tools | None | — |
-| `/ping` | Check SCC's connection and Discord response time | None | — |
-| `/privacy` | See exactly what SCC stores, excludes, and keeps server-isolated | None | — |
-| `/report_data` | Privately flag an incorrect Star Citizen value, source, or location | `subject:<value>` **required** — Ship, item, mission, resource, terminal, or command with bad data<br>`correction:<value>` **required** — What SCC showed, what you believe is correct, and any source link | — |
-| `/reports` | Owner-only: review recent private bug reports and suggestions | `report_id:<value>` — Open a report's redacted preview before optional GitHub forwarding | Maintainer |
-| `/rsi_status` | Check official Star Citizen platform and game service status | None | — |
-| `/settings` | Choose your language, ship budget, pledge currency, and reply privacy | None | — |
-| `/ship` | Look up a ship or open vehicle, dealership and cargo tools | `name:<value>` — Ship or vehicle name; leave empty to open the Ships folder | — |
-| `/start` | Start here with guided buttons for SCC's most useful features | None | — |
-| `/status` | Show Discord, provider, cache, RSI, and dashboard health | None | — |
-| `/suggest` | Privately suggest a new SCC feature or improvement | `suggestion:<value>` **required** — Describe the feature and how players or servers would use it | — |
-| `/sync_commands` | Owner-only: resync SCC slash commands and translations with Discord | None | Maintainer |
-| `/trade` | Open trading tools, find commodity routes, or plan a run for your budget | `commodity:<value>` — Commodity to trade; leave empty to open trading tools<br>`budget:<value>` — Maximum aUEC to spend on cargo<br>`ship:<value>` — Ship whose cargo capacity should be used<br>`capacity_scu:<value>` — Cargo capacity in SCU when no ship is selected | — |
-| `/update` | Owner-only: refresh SCC's shared UEX, Wiki, and reference caches | `force:<value>` — Refresh even when the current cache is still considered fresh | Maintainer |
-| `/where` | Find terminals, cities, moons, planets, and their parent locations | `query:<value>` **required** — Select or type a terminal or location name | — |
+The tables below name the sections and actions inside each header. These are GUI paths, rather than additional slash commands. Server managers and activity owners retain their permissions; maintenance tools are restricted to me.
 
-## analytics
+## /ops
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/analytics global` | Owner-only: show global anonymous command totals | `days:<value>` — Number of days to summarize, from 1 to 365 | Maintainer |
-| `/analytics server` | Show private anonymous command totals for this server | `days:<value>` — Number of days to summarize, from 1 to 365 | Manager |
-| `/analytics set` | Enable or disable optional anonymous analytics for this server | `enabled:<value>` **required** — Whether this server allows anonymous command totals | Manager |
+### Activities
 
-## config
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Plan an activity** | Create an activity and post a crew signup board | Title (required); Activity (optional); Starts (optional); Meeting point (optional); Capacity (optional); Region (optional); Ships (optional); Notes (optional) |
+| **Find a crew** | Find activities and open crew slots in this server | Include closed (optional) |
+| **Repeat weekly** | Repeat an activity each week with a fresh crew board in this channel | Operation (required); First (required); Timezone (required) |
+| **Weekly schedules** | Review weekly activities and board delivery problems in this server | No details needed |
+| **Manage a weekly schedule** | Pause, resume, or remove a weekly schedule you own or manage | Schedule (required); Action (required) |
+| **Set my reminder** | Request or stop a personal DM reminder for an activity you joined | Operation (required); Enabled (optional); Minutes (optional) |
+| **Open an activity** | Open an activity, its crew, jobs, and material reservations | Operation (required) |
+| **My reminders** | Review your activity reminders and any failed DM deliveries | No details needed |
+| **Post a crew board** | Post or replace the signup board in this channel | Operation (required) |
+| **Join a crew** | Join an activity or change your crew role | Operation (required); Role (optional) |
+| **Leave a crew** | Leave the crew and release your unfinished jobs | Operation (required) |
+| **Change activity status** | Start, complete, or cancel an activity you lead | Operation (required); Status (required) |
+| **Activity from a craft plan** | Turn a crafting plan and its material shortages into a crew activity | Blueprint (required); Quantity (optional); Starts (optional); Meeting point (optional) |
+| **Add a crew job** | Add a gathering, hauling, or other job to your activity | Operation (required); Title (required) |
+| **Manage a crew job** | Claim, release, or complete a crew job | Operation (required); Action (required); Job (optional) |
+| **Reserve materials** | Set aside shared materials so another activity cannot use them | Operation (required); Item (required); Quantity (required) |
+| **Material reservations** | Release reserved materials or record that they were consumed | Reservation (required); Action (required) |
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/config features` | Choose which optional community workflows this server uses | `feature:<value>` — The optional feature to configure<br>`enabled:<value>` — Turn this feature on or off in this server | Manager |
-| `/config get` | List advanced SCC settings saved for this server | None | Manager |
-| `/config panel` | Post a reusable SCC button panel in this server channel | None | Manager |
-| `/config presence` | Operator-only: change SCC’s global Discord status and activity text | None | Maintainer |
-| `/config set` | Set one advanced server-specific SCC value | `key:<value>` **required** — Setting name; suggestions show supported common keys<br>`value:<value>` **required** — New text value for this server | Manager |
-| `/config setup` | Set server defaults for SCC language, ship budget, currency, and reply privacy | None | Manager |
+### Earnings
 
-## craft
+| Action | What it does | Details |
+| --- | --- | --- |
+| **View earnings** | Preview crew earnings or view a saved settlement | Operation (required) |
+| **Record income or cost** | Record actual income or an expense for your crew | Operation (required); Kind (required); Amount (required); Description (required) |
+| **Void an entry** | Correct the ledger by voiding an entry while preserving its history | Entry (required) |
+| **Set a crew share** | Adjust a crew member’s share; all members start with equal shares | Operation (required); Member (required); Weight (required) |
+| **Settle crew shares** | Save the final split and lock the ledger against accidental changes | Operation (required) |
+| **Mark a share paid** | Record a payment you have already made in game | Operation (required); Member (required) |
+| **Reopen a settlement** | Reopen an unpaid settlement to correct income, costs, or shares | Operation (required) |
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/craft blueprint` | Look up a crafting blueprint, ingredients, time, and unlock status | `query:<value>` **required** — Select or type the item or blueprint you want to craft | — |
-| `/craft menu` | Open this SCC folder and choose its tools | None | — |
-| `/craft own` | Record a crafting blueprint that you own for this server's planners | `query:<value>` **required** — Select or type the blueprint you personally own | — |
-| `/craft owners` | See which members have recorded ownership of crafting blueprints | `member:<value>` — Optional member whose recorded blueprints you want to view | — |
-| `/craft plan` | Compare a blueprint's requirements with this server's shared inventory | `query:<value>` **required** — Select or type the item or blueprint you want to produce<br>`quantity:<value>` — How many finished items you want to produce | — |
-| `/craft sources` | Turn blueprint ingredients into mining, gathering, and sale-location guidance | `query:<value>` **required** — Select the blueprint or finished item you want to source<br>`quantity:<value>` — Number of finished items you intend to craft | — |
+### Rescue & escort
 
-## debrief
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Request rescue or escort** | Post a rescue or escort request with responder buttons | Kind (required); Location (required); Details (required); Expires (optional) |
+| **Find open requests** | Find open rescue and escort requests in this server | No details needed |
+| **Open a request** | Open a rescue or escort request and its controls | Request (required) |
+| **Post a request board** | Post or replace your request board in this channel | Request (required) |
+| **Update a request** | Claim, release, arrive at, resolve, or cancel a support request | Request (required); Action (required) |
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/debrief add` | Record a crew success or a lesson learned | `kind:<value>` **required** — A success or something that went wrong<br>`description:<value>` **required** — What happened and what the crew learned | — |
-| `/debrief count` | Count this server’s recorded successes or lessons | `kind:<value>` — Which kind of debrief to count | — |
-| `/debrief list` | Read recent successes or lessons learned in this server | `kind:<value>` — Which debriefs to show | — |
+### Notes
 
-## identity
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Add a note** | Save a tip, route, workaround, procedure, or guide for this server | Title (required); Body (required); Category (optional); Tags (optional); Game version (optional); Source url (optional) |
+| **Read a note** | Open one suggested community note by its ID | Note id (required) |
+| **Search notes** | Search this server's note titles, text, tags, and categories | Query (required); Category (optional) |
+| **Browse notes** | Browse recent community notes, optionally within one category | Category (optional); Limit (optional) |
+| **Edit a note** | Edit a suggested note you wrote or manage as a server administrator | Note id (required); Title (optional); Body (optional); Category (optional); Tags (optional); Game version (optional); Source url (optional) |
+| **Delete a note** | Delete a suggested note you wrote or manage as a server administrator | Note id (required) |
+| **Verify a note** | Confirm that a suggested community note still works in the current patch | Note id (required) |
+| **Note categories** | List the community note categories currently used in this server | No details needed |
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/identity display` | Choose whether your verified RSI handle appears on this server’s crew boards | `enabled:<value>` **required** — Show your RSI handle in this server, or hide it | — |
-| `/identity link` | Connect your linked Discord and RSI accounts through Citizen iD | None | — |
-| `/identity status` | Show your own saved Citizen iD connection | None | — |
-| `/identity unlink` | Remove your own saved RSI identity connection from SCC | None | — |
+### Debriefs
 
-## inventory
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Record a debrief** | Record a crew success or a lesson learned | Kind (required); Description (required) |
+| **Read debriefs** | Read recent successes or lessons learned in this server | Kind (optional) |
+| **Debrief totals** | Count this server’s recorded successes or lessons | Kind (optional) |
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/inventory add` | Add crafting material to this server's shared inventory | `name:<value>` **required** — Select or type the material or item being stored<br>`quantity:<value>` **required** — How much is available<br>`unit:<value>` — Measurement unit such as units, SCU, cSCU, or kg<br>`quality:<value>` — Optional material quality value<br>`location:<value>` — Optional place where the material is stored | — |
-| `/inventory history` | See additions, consumption, removals, and verification of shared stock | `item:<value>` **required** — Choose an inventory entry | — |
-| `/inventory list` | List crafting materials recorded in this server's shared inventory | None | — |
-| `/inventory menu` | Open this SCC folder and choose its tools | None | — |
-| `/inventory remove` | Remove one suggested entry from this server's shared inventory | `entry_id:<value>` **required** — Select the inventory entry to remove | Manager |
-| `/inventory verify` | Confirm that an inventory entry still matches the stock in game | `item:<value>` **required** — An inventory entry you own or manage | — |
+## /mining
 
-## language
+### Mining
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/language reset` | Remove your override and automatically follow server or Discord language | None | — |
-| `/language server_reset` | Remove the server override and use each member's Discord language | None | Manager |
-| `/language server_set` | Set the default SCC response language for this Discord server | `language:<value>` **required** — Choose the default language for members without a personal preference | Manager |
-| `/language set` | Override automatic detection with your personal SCC language | `language:<value>` **required** — Choose the language SCC should use for your responses | — |
-| `/language show` | Show your personal, server, Discord, and resolved SCC language | None | — |
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Resource buy & sell prices** | Open commodity data including buy, sell and mining views | Resource (required) |
+| **Mining lasers** | Inspect a mining laser's range, power, module slots, and modifiers | Laser (required) |
+| **Mining modifiers** | Inspect a mining module or gadget and its published effects | Modifier (required) |
+| **Check a loadout** | Compare a laser and up to three mining modifiers against a rock profile | Laser (required); Modifier 1 (optional); Modifier 2 (optional); Modifier 3 (optional); Rock mass (optional); Resistance (optional); Instability (optional) |
+| **Find resource buyers** | Find the best cached locations to sell a raw mining resource | Resource (required) |
+| **Plan a mining trip** | Build a simple mining trip plan around a resource, ship, and target amount | Resource (required); Ship (optional); Amount scu (optional); Priority (optional) |
 
-## ledger
+### Refining
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/ledger add` | Record actual income or an expense for your crew | `operation:<value>` **required** — An activity you lead<br>`kind:<value>` **required** — Income or expense<br>`amount:<value>` **required** — aUEC amount, with up to two decimal places<br>`description:<value>` **required** — What the money was earned or spent on | — |
-| `/ledger paid` | Record a payment you have already made in game | `operation:<value>` **required** — An activity with a saved settlement<br>`member:<value>` **required** — The crew member you paid | — |
-| `/ledger reopen` | Reopen an unpaid settlement to correct income, costs, or shares | `operation:<value>` **required** — An activity whose settlement has no recorded payments | — |
-| `/ledger settle` | Save the final split and lock the ledger against accidental changes | `operation:<value>` **required** — An activity you lead with income, costs, and crew recorded | — |
-| `/ledger show` | Preview crew earnings or view a saved settlement | `operation:<value>` **required** — Choose an activity | — |
-| `/ledger void` | Correct the ledger by voiding an entry while preserving its history | `entry:<value>` **required** — Choose the incorrect ledger entry | — |
-| `/ledger weight` | Adjust a crew member’s share; all members start with equal shares | `operation:<value>` **required** — An activity you lead<br>`member:<value>` **required** — Crew member whose share should change<br>`weight:<value>` **required** — Relative share from 1 to 100; 2 receives twice as much as 1 | — |
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Refinery methods** | Browse refinery methods and their published yield, time, and cost values | Method (optional) |
+| **Compare refinery yields** | Compare refinery options for a resource by yield, speed, or cost | Resource (required); Priority (optional) |
 
-## lookup
+### Refinery jobs
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/lookup citizen` | Look up a public RSI citizen profile through the independent API cache | `handle:<value>` **required** — Public RSI handle to look up | — |
-| `/lookup organization` | Look up a public RSI organization profile by Spectrum ID | `sid:<value>` **required** — Organization Spectrum ID, such as TEST or ORGNAME | — |
-| `/lookup system` | Look up an independent cached RSI starmap system record | `system:<value>` **required** — Select or type a star system | — |
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Track a job** | Save a refinery job and optionally remind you when it is ready | Station (required); Material (required); Quantity (required); Ready (required); Method (optional); Remind (optional) |
+| **My refinery jobs** | See refinery completion times and your pickup queue | All members (optional) |
+| **Collect a job** | Mark a refinery job as picked up | Job (required) |
+| **Cancel a job** | Cancel a tracked refinery job and its reminder | Job (required) |
 
-## mining
+### Salvage
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/mining laser` | Inspect a mining laser's range, power, module slots, and modifiers | `laser:<value>` **required** — Select a mining laser or mining head | — |
-| `/mining loadout` | Compare a laser and up to three mining modifiers against a rock profile | `laser:<value>` **required** — Mining laser or head<br>`modifier_1:<value>` — Optional first module or gadget<br>`modifier_2:<value>` — Optional second module or gadget<br>`modifier_3:<value>` — Optional third module or gadget<br>`rock_mass:<value>` — Optional scanned rock mass<br>`resistance:<value>` — Optional scanned resistance value<br>`instability:<value>` — Optional scanned instability value | — |
-| `/mining menu` | Open this SCC folder and choose its tools | None | — |
-| `/mining modifier` | Inspect a mining module or gadget and its published effects | `modifier:<value>` **required** — Select a mining module, consumable, or gadget | — |
-| `/mining plan` | Build a simple mining trip plan around a resource, ship, and target amount | `resource:<value>` **required** — Resource you want to gather<br>`ship:<value>` — Optional mining or cargo ship for capacity planning<br>`amount_scu:<value>` — Optional target quantity in SCU<br>`priority:<value>` — Choose whether refining should favor yield, speed, or cost | — |
-| `/mining resource` | Open commodity data including buy, sell and mining views | `resource:<value>` **required** — Select a mineral, gem, or mineable crafting material | — |
-| `/mining sell` | Find the best cached locations to sell a raw mining resource | `resource:<value>` **required** — Select the raw mineral or gem to sell | — |
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Salvage ships** | Browse ships and special variants identified for salvage gameplay | Ship (optional) |
+| **Sell salvage materials** | Find cached sale routes for RMC or Construction Materials | Material (required) |
+| **Plan salvage trips** | Estimate salvage cargo trips and show current material sale options | Ship (required); Material (required); Target scu (required) |
 
-## mission
+## /craft
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/mission find` | Search current mission records by name and gameplay category | `category:<value>` **required** — Filter by mining, hauling, salvage, combat, or all<br>`query:<value>` — Optional mission title | — |
-| `/mission mining` | Browse mission records related to mining, ore, and refinery gameplay | None | — |
-| `/mission path` | Show the prerequisites, reputation, systems, and rewards for one mission | `mission:<value>` **required** — Select the mission whose unlock path you want to understand | — |
+### Items & recipes
 
-## note
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Search items** | Explore an item, its ingredients, shops and sources, or open the menu | Query (optional) |
+| **Look up a blueprint** | Look up a crafting blueprint, ingredients, time, and unlock status | Query (required) |
+| **Source ingredients** | Turn blueprint ingredients into mining, gathering, and sale-location guidance | Query (required); Quantity (optional) |
+| **Plan materials** | Compare a blueprint's requirements with this server's shared inventory | Query (required); Quantity (optional) |
+| **Record blueprint ownership** | Record a crafting blueprint that you own for this server's planners | Query (required) |
+| **Blueprint owners** | See which members have recorded ownership of crafting blueprints | Member (optional) |
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/note add` | Save a tip, route, workaround, procedure, or guide for this server | `title:<value>` **required** — Short searchable title for the note<br>`body:<value>` **required** — The useful information, instructions, warning, or workaround<br>`category:<value>` — Select an existing category or type a new one<br>`tags:<value>` — Optional comma-separated search words<br>`game_version:<value>` — Optional game version where this was confirmed, such as 4.9 LIVE<br>`source_url:<value>` — Optional reference link supporting the note | — |
-| `/note categories` | List the community note categories currently used in this server | None | — |
-| `/note delete` | Delete a suggested note you wrote or manage as a server administrator | `note_id:<value>` **required** — Select the community note you want to delete | — |
-| `/note edit` | Edit a suggested note you wrote or manage as a server administrator | `note_id:<value>` **required** — Select the community note you want to edit<br>`title:<value>` — Replacement title; leave blank to keep the current title<br>`body:<value>` — Replacement note text; leave blank to keep the current text<br>`category:<value>` — Replacement category; leave blank to keep the current category<br>`tags:<value>` — Replacement comma-separated tags<br>`game_version:<value>` — Replacement confirmed game version<br>`source_url:<value>` — Replacement reference link | — |
-| `/note list` | Browse recent community notes, optionally within one category | `category:<value>` — Optional category filter; suggestions come from this server<br>`limit:<value>` — How many notes to display, from 1 to 25 | — |
-| `/note search` | Search this server's note titles, text, tags, and categories | `query:<value>` **required** — Words to find in note titles, text, tags, or categories<br>`category:<value>` — Optional category filter; suggestions come from this server | — |
-| `/note verify` | Confirm that a suggested community note still works in the current patch | `note_id:<value>` **required** — Select the community note you personally confirmed | — |
-| `/note view` | Open one suggested community note by its ID | `note_id:<value>` **required** — Select the community note you want to open | — |
+### Inventory
 
-## ops
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Add materials** | Add crafting material to this server's shared inventory | Name (required); Quantity (required); Unit (optional); Quality (optional); Location (optional) |
+| **View inventory** | List crafting materials recorded in this server's shared inventory | No details needed |
+| **Remove materials** | Remove one suggested entry from this server's shared inventory | Entry id (required) |
+| **Verify an entry** | Confirm that an inventory entry still matches the stock in game | Item (required) |
+| **Inventory history** | See additions, consumption, removals, and verification of shared stock | Item (required) |
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/ops add_job` | Add a gathering, hauling, or other job to your activity | `operation:<value>` **required** — Choose an activity you lead<br>`title:<value>` **required** — What needs to be done | — |
-| `/ops create` | Create an activity and post a crew signup board | `title:<value>` **required** — A short name for the activity<br>`activity:<value>` — What you want to do together<br>`starts:<value>` — When to start: 30m, 2h, or a date with timezone<br>`meeting_point:<value>` — Where the crew should meet<br>`capacity:<value>` — Maximum crew size<br>`region:<value>` — Preferred server region<br>`ships:<value>` — Ships to bring, if any<br>`notes:<value>` — Anything the crew should know | — |
-| `/ops from_craft` | Turn a crafting plan and its material shortages into a crew activity | `blueprint:<value>` **required** — Choose a crafting blueprint<br>`quantity:<value>` — How many finished items to make<br>`starts:<value>` — When to start, such as 30m or 2h<br>`meeting_point:<value>` — Where the crew should meet | — |
-| `/ops job` | Claim, release, or complete a crew job | `operation:<value>` **required** — Choose an activity<br>`action:<value>` **required** — What to do with the job<br>`job:<value>` — Choose a job; omit to claim the next available one | — |
-| `/ops join` | Join an activity or change your crew role | `operation:<value>` **required** — Choose an activity<br>`role:<value>` — Your role in the crew | — |
-| `/ops leave` | Leave the crew and release your unfinished jobs | `operation:<value>` **required** — Choose the activity to leave | — |
-| `/ops list` | Find activities and open crew slots in this server | `include_closed:<value>` — Also show completed and cancelled activities | — |
-| `/ops materials` | Release reserved materials or record that they were consumed | `reservation:<value>` **required** — Choose a material reservation<br>`action:<value>` **required** — Release it, or deduct materials that were actually used | — |
-| `/ops post` | Post or replace the signup board in this channel | `operation:<value>` **required** — An activity you lead or manage | — |
-| `/ops remind` | Request or stop a personal DM reminder for an activity you joined | `operation:<value>` **required** — An upcoming activity you joined<br>`enabled:<value>` — Request a reminder, or turn it off<br>`minutes:<value>` — Minutes before the start; default 15 | — |
-| `/ops reminders` | Review your activity reminders and any failed DM deliveries | None | — |
-| `/ops reserve` | Set aside shared materials so another activity cannot use them | `operation:<value>` **required** — An activity you lead<br>`item:<value>` **required** — Shared inventory entry<br>`quantity:<value>` **required** — Amount to reserve from that entry | — |
-| `/ops schedule` | Pause, resume, or remove a weekly schedule you own or manage | `schedule:<value>` **required** — Weekly schedule ID from /ops schedules<br>`action:<value>` **required** — Pause future boards, resume delivery, or remove the schedule | — |
-| `/ops schedules` | Review weekly activities and board delivery problems in this server | None | — |
-| `/ops show` | Open an activity, its crew, jobs, and material reservations | `operation:<value>` **required** — Choose an activity in this server | — |
-| `/ops status` | Start, complete, or cancel an activity you lead | `operation:<value>` **required** — Choose an activity<br>`status:<value>` **required** — The new activity status | — |
-| `/ops weekly` | Repeat an activity each week with a fresh crew board in this channel | `operation:<value>` **required** — An activity you lead to use as a template<br>`first:<value>` **required** — First local start: YYYY-MM-DD HH:MM, within seven days<br>`timezone:<value>` **required** — IANA zone such as America/Los_Angeles, Europe/London, or UTC | — |
+## /reference
 
-## refinery
+### Locations
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/refinery best` | Compare refinery options for a resource by yield, speed, or cost | `resource:<value>` **required** — Resource you intend to refine<br>`priority:<value>` — How SCC should rank the options | — |
-| `/refinery cancel` | Cancel a tracked refinery job and its reminder | `job:<value>` **required** — Choose the job to cancel | — |
-| `/refinery collect` | Mark a refinery job as picked up | `job:<value>` **required** — Choose one of your completed refinery jobs | — |
-| `/refinery jobs` | See refinery completion times and your pickup queue | `all_members:<value>` — Show the server’s jobs instead of only yours | — |
-| `/refinery menu` | Open this SCC folder and choose its tools | None | — |
-| `/refinery methods` | Browse refinery methods and their published yield, time, and cost values | `method:<value>` — Optional refinery method to prioritize in the results | — |
-| `/refinery track` | Save a refinery job and optionally remind you when it is ready | `station:<value>` **required** — Where the refinery job is running<br>`material:<value>` **required** — What you are refining<br>`quantity:<value>` **required** — Cargo amount in SCU<br>`ready:<value>` **required** — Time remaining, such as 6h30m<br>`method:<value>` — Refining method chosen in game<br>`remind:<value>` — Post a reminder in this channel when the job is due | — |
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Find a location** | Find terminals, cities, moons, planets, and their parent locations | Query (required) |
 
-## salvage
+### Missions
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/salvage plan` | Estimate salvage cargo trips and show current material sale options | `ship:<value>` **required** — Select the salvage ship or exact special variant<br>`material:<value>` **required** — Choose RMC or Construction Materials<br>`target_scu:<value>` **required** — How much material you intend to collect | — |
-| `/salvage sell` | Find cached sale routes for RMC or Construction Materials | `material:<value>` **required** — Choose the salvage material to sell | — |
-| `/salvage ships` | Browse ships and special variants identified for salvage gameplay | `ship:<value>` — Optional salvage ship or variant to inspect | — |
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Find a mission** | Search current mission records by name and gameplay category | Category (required); Query (optional) |
+| **Reputation paths** | Show the prerequisites, reputation, systems, and rewards for one mission | Mission (required) |
+| **Mining missions** | Browse mission records related to mining, ore, and refinery gameplay | No details needed |
 
-## status_watch
+### Public profiles
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/status_watch add` | Post official RSI outages and recoveries in a server channel | `channel:<value>` — Channel that should receive status changes; defaults to this channel | Manager |
-| `/status_watch list` | List channels receiving official RSI status changes in this server | None | Manager |
-| `/status_watch remove` | Stop official RSI status notifications in a server channel | `channel:<value>` — Subscribed channel to remove; defaults to this channel | Manager |
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Public citizen profile** | Look up a public RSI citizen profile through the independent API cache | Handle (required) |
+| **Public organization profile** | Look up a public RSI organization profile by Spectrum ID | Sid (required) |
+| **Starmap systems** | Look up an independent cached RSI starmap system record | System (required) |
 
-## support
+## /settings
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/support list` | Find open rescue and escort requests in this server | None | — |
-| `/support post` | Post or replace your request board in this channel | `request:<value>` **required** — Choose a request you created or manage | — |
-| `/support request` | Post a rescue or escort request with responder buttons | `kind:<value>` **required** — Rescue or escort<br>`location:<value>` **required** — Your location or meeting point<br>`details:<value>` **required** — What you need and what responders should know<br>`expires:<value>` — Time until expiry, such as 1h or 30m | — |
-| `/support show` | Open a rescue or escort request and its controls | `request:<value>` **required** — Choose a rescue or escort request | — |
-| `/support update` | Claim, release, arrive at, resolve, or cancel a support request | `request:<value>` **required** — Choose a rescue or escort request<br>`action:<value>` **required** — What to do with the request | — |
+### Preferences
 
-## trade_alert
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Personal preferences** | Choose your language, ship budget, pledge currency, and reply privacy | No details needed |
 
-| Command | Purpose | Options | Access notes |
-| --- | --- | --- | --- |
-| `/trade_alert add` | Notify a channel when a commodity reaches a profit-per-SCU target | `commodity:<value>` **required** — Select or type the commodity to monitor<br>`minimum_profit_per_scu:<value>` **required** — Minimum aUEC profit per SCU required before alerting<br>`channel:<value>` — Channel that should receive the alert; defaults to this channel | Manager |
-| `/trade_alert list` | List commodity profit alerts configured for this server | None | Manager |
-| `/trade_alert remove` | Remove one suggested commodity profit alert | `alert_id:<value>` **required** — Select the trade alert to remove | Manager |
+### Identity
 
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Link Citizen iD** | Connect your linked Discord and RSI accounts through Citizen iD | No details needed |
+| **My linked identity** | Show your own saved Citizen iD connection | No details needed |
+| **Unlink Citizen iD** | Remove your own saved RSI identity connection from SCC | No details needed |
+| **RSI display on crew boards** | Choose whether your verified RSI handle appears on this server’s crew boards | Enabled (required) |
+
+### Language
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Current language** | Show your personal, server, Discord, and resolved SCC language | No details needed |
+| **Set my language** | Override automatic detection with your personal SCC language | Language (required) |
+| **Use server language** | Remove your override and automatically follow server or Discord language | No details needed |
+
+## /server
+
+### Setup & controls
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Set an advanced value** | Set one advanced server-specific SCC value | Key (required); Value (required) |
+| **View server values** | List advanced SCC settings saved for this server | No details needed |
+| **Server preferences** | Set server defaults for SCC language, ship budget, currency, and reply privacy | No details needed |
+| **Post a shared SCC panel** | Post a reusable SCC button panel in this server channel | No details needed |
+| **Enable or disable features** | Choose which optional community workflows this server uses | Feature (optional); Enabled (optional) |
+
+### Trade alerts
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Add a trade alert** | Notify a channel when a commodity reaches a profit-per-SCU target | Commodity (required); Minimum profit per scu (required); Channel (optional) |
+| **View trade alerts** | List commodity profit alerts configured for this server | No details needed |
+| **Remove a trade alert** | Remove one suggested commodity profit alert | Alert id (required) |
+
+### Service alerts
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Subscribe to RSI status** | Post official RSI outages and recoveries in a server channel | Channel (optional) |
+| **Status subscriptions** | List channels receiving official RSI status changes in this server | No details needed |
+| **Stop status notifications** | Stop official RSI status notifications in a server channel | Channel (optional) |
+
+### Usage
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Server usage** | Show private anonymous command totals for this server | Days (optional) |
+| **Usage recording preference** | Enable or disable optional anonymous analytics for this server | Enabled (required) |
+
+### Language
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Set server language** | Set the default SCC response language for this Discord server | Language (required) |
+| **Reset server language** | Remove the server override and use each member's Discord language | No details needed |
+
+### Maintenance
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Global usage** | I use this to review global anonymous command totals; restricted to me | Days (optional) |
+| **SCC profile & status** | I use this to change SCC’s global Discord status and activity text; restricted to me | No details needed |
+| **Refresh source data** | I use this to refresh the shared UEX, Wiki, and reference caches; restricted to me | Force (optional) |
+| **Review submitted reports** | I use this to review private bug reports and suggestions; restricted to me | Report id (optional) |
+| **Sync Discord headers** | I use this to resync SCC’s headers and translations with Discord; restricted to me | No details needed |
+
+## /help
+
+### Guides
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Read a guide** | Browse SCC features, examples, and command categories | Category (optional) |
+
+### Status
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Connection check** | Check SCC's connection and Discord response time | No details needed |
+| **SCC health** | Show Discord, provider, cache, RSI, and dashboard health | No details needed |
+| **RSI service status** | Check official Star Citizen platform and game service status | No details needed |
+
+### Feedback
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Report a bug** | Send me a private report about an SCC problem | Description (required) |
+| **Suggest an idea** | Privately suggest a new SCC feature or improvement | Suggestion (required) |
+| **Report incorrect game data** | Privately flag an incorrect Star Citizen value, source, or location | Subject (required); Correction (required) |
+
+### Privacy
+
+| Action | What it does | Details |
+| --- | --- | --- |
+| **Privacy information** | See exactly what SCC stores, excludes, and keeps server-isolated | No details needed |
+
+Ship comparisons, dealerships, cargo and fuel remain in `/ship`. Route calculators and filters remain in `/trade`. The **Item shops** button is in `/craft`. Recipe ingredients and commodity results still link to their related views and UEX marketplace browsing.

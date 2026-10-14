@@ -58,9 +58,9 @@ I use reasonable technical and organizational measures to protect your data from
 
 You can contact me to request access to, correction of, or removal of your stored data. I'll need to verify your identity or ownership before handling the request. I'll respond within a reasonable timeframe, subject to applicable obligations. Depending on your jurisdiction, you may have additional rights; contact me for assistance.
 
-Use `/identity unlink` or the account-page unlink control to remove your active saved connection and display permissions. You can also revoke SCC in Citizen iD; revocation there alone does not delete SCC's existing snapshot. Unlinking does not remove separate community records, copies already posted, or historical backups. Contact me about other records. No general automated member data-export/deletion command is currently available.
+Use `/settings` → **Identity → Unlink Citizen iD** or the account-page unlink control to remove your active saved connection and display permissions. You can also revoke SCC in Citizen iD; revocation there alone does not delete SCC's existing snapshot. Unlinking does not remove separate community records, copies already posted, or historical backups. Contact me about other records. No general automated member data-export/deletion command is currently available.
 
-Managers can use `/analytics set enabled:false` to stop future command-usage recording in their server; older entries remain until pruning/removal. Members can cancel activity reminders or leave the crew to stop those reminders. Reminder preferences do not carry over to new weekly activities.
+Managers can open `/server` → **Usage → Usage recording preference**, set **Enabled** to **No**, and choose **Run** to stop future command-usage recording in their server; older entries remain until pruning/removal. Members can cancel activity reminders or leave the crew to stop those reminders. Reminder preferences do not carry over to new weekly activities.
 
 ## 7. Changes to this policy
 

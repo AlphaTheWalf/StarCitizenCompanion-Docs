@@ -4,32 +4,30 @@
 
 ## Open SCC
 
-Run `/start` in your server, or click **Open my SCC panel** on a shared hub. On your first visit, choose your language, pledge currency, ship budget, and private or public replies. Select **Save and open SCC**, or **Use SCC now** to keep the defaults.
+Run `/start` for an introduction and examples, or `/menu` to open SCC’s folders. You can also use **Open my SCC panel** on a shared hub.
 
-Setup stays private. When you finish, SCC opens a separate public menu if your preferences allow it. Game lookups default to public; saved private preferences still apply. You can change it any time in **Settings** or `/settings`.
+`/menu` is the main hub. Your preferences are optional: choose **My preferences** on the introduction, or open `/settings` → **Preferences → Personal preferences**. Preferences stay private. Game lookups default to public, while saved visibility choices still apply.
 
-## Pick something to do
+## Pick a folder
 
-| Section | What you can do |
+| Header | What you can do |
 | --- | --- |
-| Home | Get help or read the latest updates |
-| Crew | Find a crew, plan an activity, or request rescue and escort |
-| Trade | Plan and calculate cargo runs; filter route reports |
-| Commodities | Buy and sell locations, raw/refined materials, mining and refining views |
-| Ships | Search, compare editions, find dealerships, or check cargo capacity and containers |
-| Crafting | Look up items and blueprints, explore ingredients, or check shared inventory |
-| Mining | Look up resources and equipment, plan a trip, or compare refining options |
-| More | Check mission requirements, share notes, look up RSI profiles, or link your account |
-| Settings | Change your preferences |
+| `/ship` | Ship details, editions, comparisons, dealerships, cargo and fuel |
+| `/commodity` | Buy/sell locations, materials, mining and refining views |
+| `/trade` | Routes, budgets, calculations and report filters |
+| `/mining` | Mining equipment, trip plans, refining, refinery jobs and salvage |
+| `/craft` | Items, recipes, ingredients, blueprint ownership and inventory |
+| `/ops` | Activities, crew, jobs, weekly schedules, earnings, rescue, notes and debriefs |
+| `/reference` | Locations, missions, public citizen/org profiles and starmap |
+| `/settings` | Your preferences, language and Citizen iD connection |
+| `/server` | Manager settings, shared panels, notifications and usage |
+| `/help` | Guides, status, privacy, feedback and data reports |
 
-The section you're viewing is highlighted in blue. Some features may be disabled by your server's managers.
-
-Open the main folders directly with `/ship`, `/commodity` or `/trade`. Use `/menu` to choose another folder. Each result shows tools for its own topic rather than a list of every activity.
+Choose a section, then an action. Detail forms stay private. Set required fields, adjust any optional fields you need, then choose **Run**. Searchable fields offer matching suggestions; member and channel fields have their own pickers. Server features and permissions still apply.
 
 ## Items, recipes, and source links
 
-Try `/item query:Karna Rifle` to see a matching recipe, shops, and sources. `/craft blueprint query:Karna Rifle` takes you straight to the recipe. Run `/item` without a name or choose Crafting from `/menu` to browse its tools.
-
+Open `/craft` → **Items & recipes → Search items** and enter `Karna Rifle`, or choose **Look up a blueprint** in **Items & recipes**. The **Item shops** button looks up NPC shop offers.
 When viewing a recipe:
 
 - Select an ingredient under **Explore an ingredient or related result** to look it up in SCC. Use **Back** to return. A commodity ingredient opens its buy/sell and mining views, with **Back to recipe** to return.
@@ -83,14 +81,14 @@ Check the date and game version shown before buying or trading. Update times var
 
 ## Join a crew
 
-Open **Crew → Find a crew**, choose an activity, and pick a role. Check the board for jobs and use **Remind me** if you'd like a private reminder. Leaving the crew cancels it. See [Community activities](COMMUNITY_ACTIVITIES.md) for planning your own session.
+Open `/ops` → **Activities → Find a crew**, or reach it through **Ops & community** in `/menu`, choose an activity, and pick a role. Check the board for jobs and use **Remind me** if you'd like a private reminder. Leaving the crew cancels it. See [Community activities](COMMUNITY_ACTIVITIES.md) for planning your own session.
 
 ## Link your RSI identity, if you want
 
 SCC works without account linking. Citizen iD verifies your RSI identity and matches it to the Discord account you've linked there.
 
-Open **More → RSI linking** or `/identity link`, then finish signing in on the account page. `/identity status` shows the saved result privately. It reflects your last sign-in, so it isn't a continuous identity check.
+Open `/settings` → **Identity → Link Citizen iD**, then finish signing in on the account page. **My linked identity** shows your saved result privately. It reflects your last sign-in, so it isn’t a continuous identity check.
 
-To show your verified RSI handle on this server's boards, use `/identity display enabled:true`. Display is off by default and set separately for each server. Use `enabled:false` to hide it, or `/identity unlink` to remove the connection. Read the [privacy policy](PRIVACY_POLICY.md) for details.
+**RSI display on crew boards** lets you choose **Yes** or **No** for this server. Display is off by default and set separately for each server. **Unlink Citizen iD** removes the connection. Read the [privacy policy](PRIVACY_POLICY.md) for details.
 
 Everyday features work inside Discord. Account linking opens a sign-in page. I use a separate private dashboard to maintain SCC; you don't need it to use the bot.

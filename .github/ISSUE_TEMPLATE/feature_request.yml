@@ -4,7 +4,7 @@ title: "[Idea]: "
 body:
   - type: markdown
     attributes:
-      value: This issue is public, so please leave out private details. You can also send the bot owner an idea with /suggest in Discord.
+      value: This issue is public, so please leave out private details. You can also send me a private idea through /help → Feedback → Suggest an idea in Discord.
   - type: textarea
     id: need
     attributes:

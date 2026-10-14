@@ -2,6 +2,17 @@
 
 [Back to the docs](README.md)
 
+## 3.6.0 — October 13, 2026
+
+- Made `/menu` the main hub and `/start` a short introduction with examples and menu/preferences buttons.
+- Reduced Discord’s picker from 37 roots and 118 action paths to 12 callable headers, with no published subcommands.
+- Moved activities, crew jobs, earnings, rescue, notes and debriefs into the Ops GUI. Mining holds refining, refinery jobs and salvage; Crafting holds recipes and inventory.
+- Added Reference for locations, missions and public profiles. Settings holds personal preferences and identity; Server holds manager controls, notifications and maintenance; Help holds guides, status and feedback.
+- Retained all existing actions through private detail forms, choice menus, searchable suggestions, member selectors and channel selectors. Forms expose optional details as well as required fields.
+- Reused the original permission, feature, ownership and input validation checks. A submitted form cannot run twice; changing an activity clears a previously selected job.
+- Kept ship, commodity and trade lookup options on their headers. Public game lookup defaults and retained results remain available.
+- Updated help text, reminders and documentation to point to the folder paths, and included GUI action names in anonymous usage counts while honoring server opt-outs.
+
 ## 3.5.0 — October 13, 2026
 
 - Added `/commodity` and a working `/menu` entry. `/ship`, `/commodity` and `/trade` open their folders when no lookup options are supplied.

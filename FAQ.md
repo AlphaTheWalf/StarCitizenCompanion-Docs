@@ -4,7 +4,7 @@
 
 ## Where do I start?
 
-Run `/start` and pick a task. **Crew** helps you join or plan a session; **Ships**, **Trade**, and **Crafting** are useful for browsing on your own. You don't need to learn the whole command list.
+Run `/start` for a short introduction, or `/menu` to pick a task. **Ops & community** helps you join or plan a session; **Ships**, **Trade**, and **Crafting** are useful for browsing on your own. You don't need to learn the whole command list.
 
 ## Do I need a website?
 
@@ -12,7 +12,7 @@ Most features work in Discord. Optional Citizen iD linking opens a sign-in page.
 
 ## What does account linking do?
 
-Citizen iD connects your verified RSI identity to the Discord account linked there. You can choose to show that RSI handle on crew boards. It doesn't link chat channels to the game, read your conversations, control gameplay, or automatically assign roles. `/lookup citizen` is a public profile lookup, not identity verification.
+Citizen iD connects your verified RSI identity to the Discord account linked there. You can choose to show that RSI handle on crew boards. It doesn't link chat channels to the game, read your conversations, control gameplay, or automatically assign roles. `/reference` → **Public profiles → Public citizen profile** is a public profile lookup, not identity verification.
 
 ## Why is a ship price in Euros?
 
@@ -24,7 +24,7 @@ Game lookups are public by default unless your personal or server reply preferen
 
 ## Can someone else use my menu?
 
-Personal menus are yours, even when public. Others can open their own with `/start` or the shared hub. Crew and support boards have shared controls for eligible members.
+Personal menus are yours, even when public. Others can open their own with `/menu` or the shared hub. Crew and support boards have shared controls for eligible members.
 
 ## Why did my menu disappear or its buttons stop working?
 
@@ -32,7 +32,7 @@ Controls stay active for four hours, and results remain after they expire or SCC
 
 ## Can SCC find a player selling an item?
 
-Yes. Look up a weapon or material with `/item`, or explore an ingredient from a recipe. Open **UEX marketplace** to search sellers or buyers and filter by price, quality, location, currency, and unit. Open the listing on UEX to contact the trader. Listings may be cached for five minutes, and reported stock and prices can change.
+Yes. Look up a weapon or material with `/craft` → **Items & recipes → Search items**, or explore an ingredient from a recipe. Open **UEX marketplace** to search sellers or buyers and filter by price, quality, location, currency, and unit. Open the listing on UEX to contact the trader. Listings may be cached for five minutes, and reported stock and prices can change.
 
 ## Why are old menus still in the channel?
 
@@ -40,7 +40,7 @@ Menus reuse their reply while you browse, then keep the result when controls exp
 
 ## How often does the data update?
 
-It depends on the source. Check the date and game version on a result; cached information may still appear during a provider outage. Use `/report_data` if something looks wrong so I can check it. I can also refresh sources with `/update`.
+It depends on the source. Check the date and game version on a result; cached information may still appear during a provider outage. Use `/help` → **Feedback → Report incorrect game data** if something looks wrong so I can check it. I can also refresh sources with `/server` → **Maintenance → Refresh source data**.
 
 ## Can SCC see my Discord status?
 
@@ -48,15 +48,15 @@ No. SCC doesn't monitor members' online, idle, or Do not disturb status. I can c
 
 ## Is everything translated?
 
-Navigation, setup, reply choices, and command descriptions support ten languages. Some advanced forms and explanations still use English. Your personal language setting takes priority over the server's setting, with your Discord language used as a fallback.
+Main navigation, setup and reply choices support ten languages. Some folder labels, command descriptions, forms and explanations still use English. Your personal language setting takes priority over the server's setting, with your Discord language used as a fallback.
 
 ## Where do my reports go?
 
-I receive and review `/bug`, `/suggest`, and `/report_data` privately. They aren't automatically posted to GitHub. Before I forward a report to a private repository, I review it and can remove sensitive details. GitHub issues you open yourself here are public.
+I receive and review `/help` → **Feedback → Report a bug**, `/help` → **Feedback → Suggest an idea**, and `/help` → **Feedback → Report incorrect game data** privately. They aren't automatically posted to GitHub. Before I forward a report to a private repository, I review it and can remove sensitive details. GitHub issues you open yourself here are public.
 
 ## How do I remove my data?
 
-Use `/identity unlink` to remove the saved account connection and display permissions. Revoking SCC in Citizen iD alone doesn't delete the connection already saved by SCC. For other access, correction, or removal requests, [email me](mailto:AlphaTheWalf@gmail.com). Please keep private details out of public issues. See the [privacy policy](PRIVACY_POLICY.md).
+Use `/settings` → **Identity → Unlink Citizen iD** to remove the saved account connection and display permissions. Revoking SCC in Citizen iD alone doesn't delete the connection already saved by SCC. For other access, correction, or removal requests, [email me](mailto:AlphaTheWalf@gmail.com). Please keep private details out of public issues. See the [privacy policy](PRIVACY_POLICY.md).
 
 ## Where did the cargo and other shortcuts go?
 
