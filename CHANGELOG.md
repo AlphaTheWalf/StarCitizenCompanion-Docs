@@ -2,6 +2,13 @@
 
 [Back to the docs](README.md)
 
+## 3.6.1 — October 13, 2026
+
+- Fixed refinery reminders and Citizen iD linking guidance that still mentioned older commands. They now point to the current folders.
+- Checked provider connections, database integrity, dashboard access restrictions and the command list.
+- Added a backup guard for both supported update paths, then refreshed the encrypted recovery copy on my Windows PC.
+- Archived earlier development notes and cleared temporary SCC review files and unused test images. Recovery backups remain available.
+
 ## 3.6.0 — October 13, 2026
 
 - Made `/menu` the main hub and `/start` a short introduction with examples and menu/preferences buttons.
