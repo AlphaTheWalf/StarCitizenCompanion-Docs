@@ -2,6 +2,12 @@
 
 [Back to the docs](README.md)
 
+## 3.6.2 — October 13, 2026
+
+- Updated SCC’s web framework dependencies, configuration loader and image installer after checking published security fixes.
+- Added size and field-count limits to dashboard forms so oversized submissions are rejected before parsing.
+- Checked all 37 installed production Python packages with no known advisories reported, and passed 245 automated tests.
+
 ## 3.6.1 — October 13, 2026
 
 - Fixed refinery reminders and Citizen iD linking guidance that still mentioned older commands. They now point to the current folders.

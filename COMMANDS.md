@@ -2,7 +2,7 @@
 
 [Back to the docs](README.md)
 
-SCC 3.6.1 has **12 callable headers**. Individual actions appear inside the GUIs. I kept the existing tools and moved their entry points into folders.
+SCC 3.6.2 has **12 callable headers**. Individual actions appear inside the GUIs. I kept the existing tools and moved their entry points into folders.
 
 ## Headers
 
