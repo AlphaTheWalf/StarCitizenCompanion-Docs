@@ -2,7 +2,7 @@
 
 [Back to the docs](README.md)
 
-SCC 3.6.5 has **12 callable headers**. Individual actions appear inside the GUIs. I kept the existing tools and moved their entry points into folders.
+SCC 3.7.0 has **13 callable headers**. Individual actions appear inside the GUIs. I kept the existing tools and moved their entry points into folders.
 
 ## Headers
 
@@ -12,6 +12,7 @@ SCC 3.6.5 has **12 callable headers**. Individual actions appear inside the GUIs
 | `/menu` | Main menu |
 | `/ship` | Ship information and tools |
 | `/commodity` | Material information and buy/sell views |
+| `/cargo` | Same tools and options as `/commodity` |
 | `/trade` | Trade routes and calculations |
 | `/mining` | Mining, refining, refinery jobs and salvage |
 | `/craft` | Items, recipes and inventory |
@@ -23,7 +24,33 @@ SCC 3.6.5 has **12 callable headers**. Individual actions appear inside the GUIs
 
 `/menu` is the main hub. `/start` explains how SCC works and gives a few examples. You can open a topic header directly.
 
-For quick lookups, `/ship` accepts `name`, `/commodity` accepts `name`, and `/trade` accepts `commodity`, `budget`, `ship` and `capacity_scu`. All options are optional. For example, `/ship name:Reclaimer` or `/commodity name:Gold` opens a result immediately.
+All header inputs are optional. Leave them empty to browse the GUI, or use a shortcut:
+
+| Example | Opens |
+| --- | --- |
+| `/ship name:Reclaimer` | Ship details |
+| `/craft blueprint:Karna Rifle` | Blueprint and ingredients |
+| `/craft item:Iron` | Item or material, shops and sources |
+| `/commodity name:Iron view:sell` | Buyers for your Iron |
+| `/cargo name:Gold view:buy` | Gold sellers you can buy from |
+| `/mining resource:Iron` | Resource reports and commodity views |
+| `/mining laser:Lancet` | Mining laser details |
+| `/mining modifier:Surge` | Modifier details |
+| `/mining laser:Lancet modifier:Surge` | Loadout check |
+| `/reference location:Area18` | Location or terminal |
+| `/reference mission:NAME` | Mission requirements and unlocks |
+| `/reference citizen:HANDLE` | Public RSI profile |
+| `/reference organization:SID` | Public RSI organization |
+| `/reference system:Stanton` | Starmap system |
+| `/ops activity:123` | Saved activity in this server |
+| `/help topic:crafting` | Crafting guide |
+
+Names offer autocomplete where available. Activity input also suggests titles, and stores the selected activity ID. Choose one Crafting or Reference lookup per invocation; Mining accepts a laser and modifier together for a loadout check.
+
+`/commodity` and `/cargo` share `name` and `view` options. Views are `overview`, `buy`, `sell`, `mining`, `refinery` and `trade`. Selecting only a view opens a name prompt that keeps that choice. Commodity results include an **Open UEX** link button.
+
+`/trade` retains optional `commodity`, `budget`, `ship` and `capacity_scu` inputs. For example, `/trade commodity:Gold budget:100000 capacity_scu:46` plans a run. A ship or capacity needs a budget; advanced filters remain in the GUI.
+
 
 ## Using a tool
 

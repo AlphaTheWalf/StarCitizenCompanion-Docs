@@ -13,7 +13,7 @@ Run `/start` for an introduction and examples, or `/menu` to open SCC’s folder
 | Header | What you can do |
 | --- | --- |
 | `/ship` | Ship details, editions, comparisons, dealerships, cargo and fuel |
-| `/commodity` | Buy/sell locations, materials, mining and refining views |
+| `/commodity` or `/cargo` | Buy/sell locations, materials, mining and refining views |
 | `/trade` | Routes, budgets, calculations and report filters |
 | `/mining` | Mining equipment, trip plans, refining, refinery jobs and salvage |
 | `/craft` | Items, recipes, ingredients, blueprint ownership and inventory |
@@ -24,6 +24,14 @@ Run `/start` for an introduction and examples, or `/menu` to open SCC’s folder
 | `/help` | Guides, status, privacy, feedback and data reports |
 
 Choose a section, then an action. Simple searches ask for a name and open the result when you choose a match. Forms for actions that save or change something stay private: fill the details, then choose the named action button. Optional fields keep their defaults until changed. Server features and permissions still apply.
+
+## Jump straight to a result
+
+If you know what you want, add an optional input: `/craft blueprint:Karna Rifle`, `/craft item:Iron`, `/mining resource:Iron`, `/reference location:Area18`, or `/ops activity:123`. Names offer matching suggestions where available. `/help topic:crafting` opens that guide.
+
+Use `/commodity name:Iron view:sell` to find buyers for your cargo, or `/cargo name:Gold view:buy` to find sellers. `/cargo` shares the same tools as `/commodity`. Other commodity views include mining, refining and trade routes. Results keep their navigation controls and have an **Open UEX** button.
+
+Leave a header’s inputs empty whenever you want its GUI instead. The [command reference](COMMANDS.md) lists all shortcuts.
 
 ## Items, recipes, and source links
 

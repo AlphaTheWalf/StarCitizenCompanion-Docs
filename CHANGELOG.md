@@ -2,6 +2,14 @@
 
 [Back to the docs](README.md)
 
+## 3.7.0 — October 17, 2026
+
+- Added optional header inputs for blueprint and item searches, mining resources and equipment, saved activities, reference lookups and help topics. Leaving them empty still opens the GUI.
+- Added /cargo as a compatibility name for /commodity, sharing its options and results. The picker now has 13 headers with no published subcommands.
+- Added commodity view choices for buying, selling, mining, refining and routes. Buy shows sellers you can purchase from; sell shows buyers for your material. Choosing a view without a name opens a search prompt for that view.
+- Added an Open UEX button to commodity results, using a provider URL or slug when available and the commodity list otherwise.
+- Reused existing action checks and result controls. Activity suggestions and lookups remain scoped to their server, and saved reply visibility still applies.
+
 ## 3.6.5 — October 14, 2026
 
 - Fixed ship comparisons keeping UEX’s single crew count while details used the Wiki’s min/max fields. Both views now use the same source-labelled crew display.
