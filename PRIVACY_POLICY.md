@@ -1,6 +1,6 @@
 # Privacy policy
 
-Last updated: October 13, 2026
+Last updated: November 18, 2026
 
 ## 1. Introduction and scope
 
@@ -36,7 +36,7 @@ Game-data lookups and the main menu are public by default, unless a saved server
 
 Your verified RSI handle is hidden from crew boards until you enable display for that server. Enabled boards can show the handle and last verification date, as can the activity page on my private dashboard. Turn display off, use the account page's hide-everywhere control, or unlink to revoke that display permission. SCC queues updates to tracked boards and retries failed edits a limited number of times. It cannot delete other people's copied messages/screenshots or guarantee removal from old untracked posts.
 
-Operational records and reports can persist until removed through the available controls or handled by me; there is no automatic deletion deadline for every record. Inventory removal can leave audit/history records. Command analytics older than 180 days are pruned periodically. Logs rotate by file size rather than an exact number of days.
+Operational records and reports can persist until removed through the available controls or handled by me; there is no automatic deletion deadline for every record. Inventory removal can leave audit/history records. Command analytics older than 180 days are pruned periodically. If SCC is removed from a server, I automatically delete that server's saved records (settings, activities, crew boards and reminders, inventory, notes, earnings and payment records, support requests and usage records) 30 days later. Inviting SCC back within that time cancels the deletion. Personal preferences and linked-account records are not part of this, and backups follow the rotation described below. Logs rotate by file size rather than an exact number of days.
 
 Full recovery archives are encrypted before transfer to my off-device backup storage. The local archive job retains the latest 30 archives; the off-device collector removes archives older than 90 days while retaining its latest copy. Protected local database/update snapshots and manually retained recovery copies can also exist. Backups may retain records removed from the active database until those copies are rotated or removed; unlinking is not an immediate purge of all historical backups.
 
