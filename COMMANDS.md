@@ -272,7 +272,7 @@ The tables below name the sections and actions inside each header. These are GUI
 
 | Action | What it does | Details |
 | --- | --- | --- |
-| **Server usage** | Show private anonymous command totals for this server | Days (optional) |
+| **Server usage** | Show private anonymous command and menu-activity totals for this server | Days (optional) |
 | **Usage recording preference** | Enable or disable optional anonymous analytics for this server | Enabled (required) |
 
 ### Language
@@ -286,7 +286,7 @@ The tables below name the sections and actions inside each header. These are GUI
 
 | Action | What it does | Details |
 | --- | --- | --- |
-| **Global usage** | I use this to review global anonymous command totals; restricted to me | Days (optional) |
+| **Global usage** | I use this to review global anonymous command and menu-activity totals; restricted to me | Days (optional) |
 | **SCC profile & status** | I use this to change SCC’s global Discord status and activity text; restricted to me | No details needed |
 | **Refresh source data** | I use this to refresh the shared UEX, Wiki, and reference caches; restricted to me | Force (optional) |
 | **Review submitted reports** | I use this to review private bug reports and suggestions; restricted to me | Report id (optional) |

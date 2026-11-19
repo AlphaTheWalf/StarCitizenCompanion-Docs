@@ -1,6 +1,6 @@
 # Privacy policy
 
-Last updated: November 18, 2026
+Last updated: November 19, 2026
 
 ## 1. Introduction and scope
 
@@ -18,6 +18,7 @@ SCC stores the information needed for the features you use:
 | Personal/server preferences | Language, pledge currency, ship budget, result visibility, feature switches and other settings |
 | Bug reports, suggestions and data corrections, including reporter ID, display name and submitted text | My review, troubleshooting and requested improvements |
 | Command-usage records: interaction ID, server ID, command path, locale, time, success/failure and error type | Operational counts and reliability monitoring. This analytics table omits user IDs, command arguments and message content |
+| Menu-activity counters: the day, server ID, the internal name of a menu button, form or section, interface language, and counts of uses and errors | See which features people use so I can improve or retire them. These counters omit user IDs, message IDs, anything typed or chosen in a menu, and the time of day |
 | Technical logs and signed website session cookies | Diagnose service failures and support sign-in, authorization state and form protection |
 
 SCC does not scan/store general channel conversations or monitor members' online/idle/DND status. Information deliberately submitted in a command/form may contain personal details; avoid putting passwords, financial details or other unnecessary private information into it. Game earnings are aUEC records, not bank/payment-card information.
@@ -36,7 +37,7 @@ Game-data lookups and the main menu are public by default, unless a saved server
 
 Your verified RSI handle is hidden from crew boards until you enable display for that server. Enabled boards can show the handle and last verification date, as can the activity page on my private dashboard. Turn display off, use the account page's hide-everywhere control, or unlink to revoke that display permission. SCC queues updates to tracked boards and retries failed edits a limited number of times. It cannot delete other people's copied messages/screenshots or guarantee removal from old untracked posts.
 
-Operational records and reports can persist until removed through the available controls or handled by me; there is no automatic deletion deadline for every record. Inventory removal can leave audit/history records. Command analytics older than 180 days are pruned periodically. If SCC is removed from a server, I automatically delete that server's saved records (settings, activities, crew boards and reminders, inventory, notes, earnings and payment records, support requests and usage records) 30 days later. Inviting SCC back within that time cancels the deletion. Personal preferences and linked-account records are not part of this, and backups follow the rotation described below. Logs rotate by file size rather than an exact number of days.
+Operational records and reports can persist until removed through the available controls or handled by me; there is no automatic deletion deadline for every record. Inventory removal can leave audit/history records. Command analytics and menu-activity counters older than 180 days are pruned periodically. If SCC is removed from a server, I automatically delete that server's saved records (settings, activities, crew boards and reminders, inventory, notes, earnings and payment records, support requests and usage records) 30 days later. Inviting SCC back within that time cancels the deletion. Personal preferences and linked-account records are not part of this, and backups follow the rotation described below. Logs rotate by file size rather than an exact number of days.
 
 Full recovery archives are encrypted before transfer to my off-device backup storage. The local archive job retains the latest 30 archives; the off-device collector removes archives older than 90 days while retaining its latest copy. Protected local database/update snapshots and manually retained recovery copies can also exist. Backups may retain records removed from the active database until those copies are rotated or removed; unlinking is not an immediate purge of all historical backups.
 
@@ -60,7 +61,7 @@ You can contact me to request access to, correction of, or removal of your store
 
 Use `/settings` → **Identity → Unlink Citizen iD** or the account-page unlink control to remove your active saved connection and display permissions. You can also revoke SCC in Citizen iD; revocation there alone does not delete SCC's existing snapshot. Unlinking does not remove separate community records, copies already posted, or historical backups. Contact me about other records. No general automated member data-export/deletion command is currently available.
 
-Managers can open `/server` → **Usage → Usage recording preference**, set **Enabled** to **No**, and choose **Run** to stop future command-usage recording in their server; older entries remain until pruning/removal. Members can cancel activity reminders or leave the crew to stop those reminders. Reminder preferences do not carry over to new weekly activities.
+Managers can open `/server` → **Usage → Usage recording preference**, set **Enabled** to **No**, and choose **Run** to stop future command-usage and menu-activity recording in their server; older entries remain until pruning/removal. Members can cancel activity reminders or leave the crew to stop those reminders. Reminder preferences do not carry over to new weekly activities.
 
 ## 7. Changes to this policy
 

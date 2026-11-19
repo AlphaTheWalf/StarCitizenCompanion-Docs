@@ -33,7 +33,7 @@ Server settings and shared records stay within that server. Personal preferences
 
 - `/server` → **Trade alerts → Add a trade alert** sets up channel notifications for reported profitable routes.
 - `/server` → **Service alerts → Subscribe to RSI status** subscribes a channel to official RSI service-status updates.
-- `/server` → **Usage → Server usage** shows usage totals. In `/server` → **Usage → Usage recording preference**, set **Enabled** to **No** and choose **Run** to stop new usage records for your server; existing records remain until removed or pruned.
+- `/server` → **Usage → Server usage** shows usage totals and the busiest menu buttons and forms for your server. In `/server` → **Usage → Usage recording preference**, set **Enabled** to **No** and choose **Run** to stop new usage records for your server; existing records remain until removed or pruned.
 - `/server` → **Language → Set server language** and `/server` → **Setup & controls → Set an advanced value** offer more settings. Use `/server` → **Setup & controls → Server preferences** for the usual preferences.
 
 See [Commands](COMMANDS.md) for the options. I manage SCC's API keys, so you don't need to provide any to set it up in your server.

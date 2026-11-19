@@ -2,6 +2,12 @@
 
 [Back to the docs](README.md)
 
+## 3.11.0 — November 19, 2026
+
+- Added anonymous counters of which menu buttons, forms and sections get used, so I can see which features people use and which to improve or retire. They store only the day, the server ID, the internal name of the control, the Discord language and a count. They never store who pressed something, what was typed or chosen, or message contents.
+- Server managers can turn this off, along with the existing command totals, in `/server` → **Usage → Usage recording preference**. The counts are removed with a server's other data 30 days after SCC leaves it, and after 180 days either way.
+- `/server` → **Usage → Server usage** now also lists the busiest menu controls for your server.
+
 ## 3.10.1 — November 18, 2026
 
 - Translated the `/start` introduction, including its buttons, and the new welcome card into French, German and Russian. If your SCC or Discord language is one of these you now see the introduction in it, and a new server gets the welcome in its preferred language. Other languages still show English for now.
