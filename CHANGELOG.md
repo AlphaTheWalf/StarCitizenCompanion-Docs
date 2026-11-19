@@ -2,6 +2,36 @@
 
 [Back to the docs](README.md)
 
+## 3.10.1 — November 18, 2026
+
+- Translated the `/start` introduction, including its buttons, and the new welcome card into French, German and Russian. If your SCC or Discord language is one of these you now see the introduction in it, and a new server gets the welcome in its preferred language. Other languages still show English for now.
+- I wrote these translations without a native speaker checking them. If anything reads oddly, please tell me through `/help` → **Feedback → Report a bug**.
+
+## 3.10.0 — November 18, 2026
+
+- Added a welcome card for newly added servers. When SCC joins a server it posts one short message in that server’s system channel, if it is allowed to post there. It says how to start with `/start`, suggests a few lookups to try, links the guide and shows where to send feedback.
+- The card is never sent to servers that already have SCC, no server gets it twice within 30 days, and at most ten go out in an hour. It needs **View Channel** and **Send Messages** in the system channel, and without them SCC stays silent. With **Embed Links** it sends the full card; without it, a plain-text version.
+
+## 3.9.0 — November 18, 2026
+
+- Added automatic cleanup of a server’s saved data after SCC leaves it. If SCC is removed from a server, that server’s settings, inventory, crew boards, notes, earnings records and other saved data are deleted 30 days later. Inviting SCC back within that time cancels the deletion, and SCC never deletes data for a server it is still in. Older backups keep their copies until they rotate out.
+- Personal data is not part of this: your preferences and linked Citizen iD stay until you remove them. There is still no single command that deletes everything about a member, so contact me for that.
+
+## 3.8.0 — November 18, 2026
+
+- I now get a direct message from SCC when one of its data sources has been failing long enough that its information is out of date, and another when it recovers.
+- Added a safety check so a data source that suddenly returns far less than SCC already has, under half of it, can no longer replace good data with a bad refresh. I can still accept a real drop by hand.
+- Added a script that clears out old update backups, and archived my one-time recovery notes and early idea list.
+
+## 3.7.2 — November 18, 2026
+
+- When a data source is down, SCC now waits 1, 2, 4 and then up to 10 minutes between retries instead of retrying every minute, and logs the full error once instead of at every attempt. A short outage still recovers within a few minutes.
+
+## 3.7.1 — November 18, 2026
+
+- Fixed the ship fallback data. StarCitizen-API changed how it delivers ships with its v2 release, and SCC’s refresh kept rejecting the new format, so that source stayed on its October 28 copy. SCC now loads the full catalog again: 257 ships, up from 237. New choices such as the Origin G12a and G12r appear, and about eighteen existing ships gain RSI listing details such as crew figures.
+- Fixed my update script. A failed update now restores the previous version automatically, an update package can include a new copy of the script without breaking the update that applies it, and its checks match the current command list.
+
 ## 3.7.0 — October 17, 2026
 
 - Added optional header inputs for blueprint and item searches, mining resources and equipment, saved activities, reference lookups and help topics. Leaving them empty still opens the GUI.
